@@ -1,0 +1,16 @@
+[general]
+Npc_amount=1
+
+[npc_1]
+Name=Trader 1
+Position_x=25
+Position_y=1
+Symbol=T
+NumberOfItems=7
+Item_1=1
+Item_2=1
+Item_3=101
+Item_4=102
+Item_5=103
+Item_6=500
+Item_7=501

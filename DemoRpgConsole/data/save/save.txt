@@ -1,0 +1,33 @@
+[Player]
+Name=Di
+Experience=0
+Max_Health=21
+Health=21
+Damage_min=1
+Damage_max=5
+Symbol=@
+Money=24
+
+[Primary stats]
+Strength=5
+Stamina=7
+Dexterity=4
+Perception=4
+Charisma=6
+Intellect=4
+
+[Secondary stats]
+Attack=2
+Defence=6
+Attention=2
+
+[Skills]
+Search=0
+Athletic=0
+Dodge=0
+
+[Equipment]
+Ranged weapon=105
+
+[Inventory]
+105

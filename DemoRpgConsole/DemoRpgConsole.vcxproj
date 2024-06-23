@@ -18,6 +18,97 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="armor.h" />
+    <ClInclude Include="battle.h" />
+    <ClInclude Include="battle_action.h" />
+    <ClInclude Include="battle_screen.h" />
+    <ClInclude Include="console_ui.h" />
+    <ClInclude Include="CurrentMapData.h" />
+    <ClInclude Include="current_npc.h" />
+    <ClInclude Include="data.h" />
+    <ClInclude Include="door.h" />
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="enemy_manager.h" />
+    <ClInclude Include="engine.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="equipment.h" />
+    <ClInclude Include="explore_screen.h" />
+    <ClInclude Include="game_data.h" />
+    <ClInclude Include="game_object.h" />
+    <ClInclude Include="game_object_type.h" />
+    <ClInclude Include="game_state.h" />
+    <ClInclude Include="hero_creation_screen.h" />
+    <ClInclude Include="inventory.h" />
+    <ClInclude Include="inventory_screen.h" />
+    <ClInclude Include="ladder.h" />
+    <ClInclude Include="level.h" />
+    <ClInclude Include="level_manager.h" />
+    <ClInclude Include="location.h" />
+    <ClInclude Include="map.h" />
+    <ClInclude Include="map_symbols.h" />
+    <ClInclude Include="menu_screen.h" />
+    <ClInclude Include="money.h" />
+    <ClInclude Include="npc.h" />
+    <ClInclude Include="npc_manager.h" />
+    <ClInclude Include="object_manager.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="player_screen.h" />
+    <ClInclude Include="potion.h" />
+    <ClInclude Include="ranged_battle.h" />
+    <ClInclude Include="rp_stats.h" />
+    <ClInclude Include="screen.h" />
+    <ClInclude Include="screen_manager.h" />
+    <ClInclude Include="shop.h" />
+    <ClInclude Include="shop_screen.h" />
+    <ClInclude Include="stats.h" />
+    <ClInclude Include="trap.h" />
+    <ClInclude Include="weapon.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="armor.cpp" />
+    <ClCompile Include="battle.cpp" />
+    <ClCompile Include="battle_action.cpp" />
+    <ClCompile Include="battle_screen.cpp" />
+    <ClCompile Include="console_ui.cpp" />
+    <ClCompile Include="CurrentMapData.cpp" />
+    <ClCompile Include="current_npc.cpp" />
+    <ClCompile Include="data.cpp" />
+    <ClCompile Include="door.cpp" />
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="enemy_manager.cpp" />
+    <ClCompile Include="engine.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="equipment.cpp" />
+    <ClCompile Include="explore_screen.cpp" />
+    <ClCompile Include="game_object.cpp" />
+    <ClCompile Include="game_state.cpp" />
+    <ClCompile Include="hero_creation_screen.cpp" />
+    <ClCompile Include="inventory.cpp" />
+    <ClCompile Include="inventory_screen.cpp" />
+    <ClCompile Include="ladder.cpp" />
+    <ClCompile Include="level.cpp" />
+    <ClCompile Include="level_manager.cpp" />
+    <ClCompile Include="location.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="menu_screen.cpp" />
+    <ClCompile Include="money.cpp" />
+    <ClCompile Include="npc.cpp" />
+    <ClCompile Include="npc_manager.cpp" />
+    <ClCompile Include="object_manager.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="player_screen.cpp" />
+    <ClCompile Include="potion.cpp" />
+    <ClCompile Include="ranged_battle.cpp" />
+    <ClCompile Include="rp_stats.cpp" />
+    <ClCompile Include="screen_manager.cpp" />
+    <ClCompile Include="shop.cpp" />
+    <ClCompile Include="shop_screen.cpp" />
+    <ClCompile Include="stats.cpp" />
+    <ClCompile Include="trap.cpp" />
+    <ClCompile Include="weapon.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

@@ -1,0 +1,28 @@
+[Player]
+Name=Di
+Experience=0
+Health=9
+Damage_min=1
+Damage_max=1
+Position_x=1
+Position_y=1
+Symbol=@
+Money=54
+
+[Primary stats]
+Strength=2
+Stamina=3
+Dexterity=7
+Perception=3
+Intellect=9
+Charisma=6
+
+[Secondary stats]
+Attack=1
+Defence=10
+Attention=1
+
+[Skills]
+Search=0
+Athletic=0
+Dodge=0
