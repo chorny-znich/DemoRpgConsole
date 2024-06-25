@@ -1,5 +1,15 @@
 #include "location.h"
 
+void Location::setPosition(Position pos)
+{
+  mPosition = pos;
+}
+
+Position Location::getPosition() const
+{
+  return mPosition;
+}
+
 void Location::setSymbol(char ch)
 {
   mSymbol = ch;

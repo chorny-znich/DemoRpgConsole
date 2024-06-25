@@ -1,0 +1,6 @@
+Version 0.2.0
+-------------
+Loot can spawn in random places.
+Ranged weapon appear in the game.
+Traps spawn in the game.
+Enemy AI

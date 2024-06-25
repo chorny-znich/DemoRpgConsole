@@ -1,25 +1,25 @@
 [Player]
-Name=Di
+Name=Amy
 Experience=0
-Health=9
+Health=12
 Damage_min=1
 Damage_max=1
 Position_x=1
 Position_y=1
 Symbol=@
-Money=54
+Money=28
 
 [Primary stats]
-Strength=2
-Stamina=3
-Dexterity=7
+Strength=7
+Stamina=4
+Dexterity=5
 Perception=3
-Intellect=9
-Charisma=6
+Intellect=4
+Charisma=7
 
 [Secondary stats]
-Attack=1
-Defence=10
+Attack=3
+Defence=7
 Attention=1
 
 [Skills]

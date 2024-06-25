@@ -13,6 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы ресурсов\Map">
+      <UniqueIdentifier>{0055c798-cf75-45db-8d41-f95bd134712d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Enemy">
+      <UniqueIdentifier>{66ba1018-d202-46db-9dea-a3770a08bebd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Npc">
+      <UniqueIdentifier>{efc24b2c-dbf1-4498-a18c-9c580827c117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Object">
+      <UniqueIdentifier>{efaf4253-100d-4809-a148-a3408e188438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Map">
+      <UniqueIdentifier>{82b1b9ad-fa51-4c15-a6ed-0a41695738b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Data">
+      <UniqueIdentifier>{1cdfa1ca-c692-484d-9741-341fe1b75d72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Map">
+      <UniqueIdentifier>{b17caee6-ed20-42d1-9cf4-3d3afb4f05a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Screen">
+      <UniqueIdentifier>{aff18e2b-9b4a-4dd7-96eb-3c14cbfe78bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="armor.h">
@@ -60,9 +84,6 @@
     <ClInclude Include="explore_screen.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="game_data.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="game_object.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -84,16 +105,7 @@
     <ClInclude Include="ladder.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="level.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="level_manager.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="location.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="map.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="map_symbols.h">
@@ -150,6 +162,18 @@
     <ClInclude Include="weapon.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="location.h">
+      <Filter>Файлы заголовков\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="game_data.h">
+      <Filter>Файлы заголовков\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="map.h">
+      <Filter>Файлы заголовков\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="level.h">
+      <Filter>Файлы заголовков\Map</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="armor.cpp">
@@ -192,9 +216,6 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="equipment.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="explore_screen.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="game_object.cpp">
@@ -263,20 +284,94 @@
     <ClCompile Include="menu_screen.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="map.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="location.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="level_manager.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="level.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="location.cpp">
+      <Filter>Исходные файлы\Map</Filter>
     </ClCompile>
+    <ClCompile Include="map.cpp">
+      <Filter>Исходные файлы\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="explore_screen.cpp">
+      <Filter>Исходные файлы\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="level.cpp">
+      <Filter>Исходные файлы\Map</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\maps\map_5.txt">
+      <Filter>Файлы ресурсов\Map</Filter>
+    </Text>
+    <Text Include="data\maps\map_0.txt">
+      <Filter>Файлы ресурсов\Map</Filter>
+    </Text>
+    <Text Include="data\maps\map_1.txt">
+      <Filter>Файлы ресурсов\Map</Filter>
+    </Text>
+    <Text Include="data\maps\map_2.txt">
+      <Filter>Файлы ресурсов\Map</Filter>
+    </Text>
+    <Text Include="data\maps\map_3.txt">
+      <Filter>Файлы ресурсов\Map</Filter>
+    </Text>
+    <Text Include="data\maps\map_4.txt">
+      <Filter>Файлы ресурсов\Map</Filter>
+    </Text>
+    <Text Include="data\enemies\enemies_5.txt">
+      <Filter>Файлы ресурсов\Enemy</Filter>
+    </Text>
+    <Text Include="data\enemies\enemies_0.txt">
+      <Filter>Файлы ресурсов\Enemy</Filter>
+    </Text>
+    <Text Include="data\enemies\enemies_1.txt">
+      <Filter>Файлы ресурсов\Enemy</Filter>
+    </Text>
+    <Text Include="data\enemies\enemies_2.txt">
+      <Filter>Файлы ресурсов\Enemy</Filter>
+    </Text>
+    <Text Include="data\enemies\enemies_3.txt">
+      <Filter>Файлы ресурсов\Enemy</Filter>
+    </Text>
+    <Text Include="data\npc\npc_4.txt">
+      <Filter>Файлы ресурсов\Npc</Filter>
+    </Text>
+    <Text Include="data\npc\npc_0.txt">
+      <Filter>Файлы ресурсов\Npc</Filter>
+    </Text>
+    <Text Include="data\npc\npc_1.txt">
+      <Filter>Файлы ресурсов\Npc</Filter>
+    </Text>
+    <Text Include="data\npc\npc_2.txt">
+      <Filter>Файлы ресурсов\Npc</Filter>
+    </Text>
+    <Text Include="data\npc\npc_3.txt">
+      <Filter>Файлы ресурсов\Npc</Filter>
+    </Text>
+    <Text Include="data\objects\objects_5.txt">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </Text>
+    <Text Include="data\objects\objects_0.txt">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </Text>
+    <Text Include="data\objects\objects_1.txt">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </Text>
+    <Text Include="data\objects\objects_2.txt">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </Text>
+    <Text Include="data\objects\objects_3.txt">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </Text>
+    <Text Include="data\objects\objects_4.txt">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </Text>
+    <Text Include="data\todo.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>

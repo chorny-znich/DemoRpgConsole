@@ -104,11 +104,15 @@ void Map::setNpcs(const std::vector<Npc>& npcs)
 
 void Map::createMap(const std::string& filename)
 {  
-  loadMap(filename);  
+  loadMap(filename);
+  size_t y = 0;
   for (const auto& str : mTextMap) {
+    size_t x = 0;
     for (const char ch : str) {
       Location newLocation; 
       newLocation.setSymbol(ch); 
+      newLocation.setPosition({ x, y });
+
       // check for passability
       if (ch == MapSymbols::WALL) {
         newLocation.setBarrier(true);
@@ -117,7 +121,9 @@ void Map::createMap(const std::string& filename)
         newLocation.setBarrier(true);
       }
       mLocationMap.push_back(std::move(newLocation));
+      x++;
     }
+    y++;
   } 
 }
 
