@@ -8,8 +8,8 @@ Door_amount=0
 Trap_amount=1
 
 [money_1]
-Position_x=4
-Position_y=2
+Position_x=random
+Position_y=random
 Visibility=7
 
 [ladder_1]

@@ -37,6 +37,21 @@
     <Filter Include="Исходные файлы\Screen">
       <UniqueIdentifier>{aff18e2b-9b4a-4dd7-96eb-3c14cbfe78bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Data">
+      <UniqueIdentifier>{35862972-a2c5-4a07-b20e-2d2a4820eef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Screen">
+      <UniqueIdentifier>{3610d45b-25e3-43b4-8d71-3e0015d075e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Engine">
+      <UniqueIdentifier>{08a34a50-7dc8-4a14-a891-208d6a3fb1b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Entity">
+      <UniqueIdentifier>{f167adca-4386-4a03-b479-4b172bc8b760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Entity">
+      <UniqueIdentifier>{bb608cf6-c168-492c-bc84-2665ccad6478}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="armor.h">
@@ -60,16 +75,10 @@
     <ClInclude Include="CurrentMapData.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="data.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="door.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="enemy.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="enemy_manager.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="engine.h">
@@ -79,9 +88,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="equipment.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="explore_screen.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="game_object.h">
@@ -121,9 +127,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="npc_manager.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="object_manager.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="player.h">
@@ -174,6 +177,21 @@
     <ClInclude Include="level.h">
       <Filter>Файлы заголовков\Map</Filter>
     </ClInclude>
+    <ClInclude Include="data.h">
+      <Filter>Файлы заголовков\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="explore_screen.h">
+      <Filter>Файлы заголовков\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="random_placement.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="object_manager.h">
+      <Filter>Файлы заголовков\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy_manager.h">
+      <Filter>Файлы заголовков\Entity</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="armor.cpp">
@@ -197,16 +215,10 @@
     <ClCompile Include="CurrentMapData.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="data.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="door.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="enemy.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="enemy_manager.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="engine.cpp">
@@ -269,9 +281,6 @@
     <ClCompile Include="player.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="object_manager.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="npc_manager.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -301,6 +310,18 @@
     </ClCompile>
     <ClCompile Include="level.cpp">
       <Filter>Исходные файлы\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="data.cpp">
+      <Filter>Исходные файлы\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="random_placement.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="object_manager.cpp">
+      <Filter>Исходные файлы\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy_manager.cpp">
+      <Filter>Исходные файлы\Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

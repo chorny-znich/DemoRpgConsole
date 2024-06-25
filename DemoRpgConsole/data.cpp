@@ -10,6 +10,9 @@ Data::Data()
   mpInstance = this;
 }
 
+/**
+ * @brief Creates databases from ini files
+*/
 void Data::init()
 {
   std::unordered_map<std::string, size_t> items;

@@ -6,6 +6,7 @@
 #include "armor.h"
 #include "door.h"
 #include "trap.h"
+#include "random_placement.h"
 #include "map_symbols.h"
 #include "data.h" 
 #include <unordered_map>
@@ -15,7 +16,8 @@
 
 void ObjectManager::createObjects(const std::string& filename)
 {
-  mObjects.clear(); 
+  mObjects.clear();
+  mRandomObjects.clear();
   std::unordered_map<std::string, size_t> objects;
   ini::Document doc = ini::load(filename);
   ini::Section section = doc.getSection("general");
@@ -28,12 +30,22 @@ void ObjectManager::createObjects(const std::string& filename)
   objects.insert({ "trap", std::stoul(section.at("Trap_amount")) });
   // Create money objects
   for (size_t i{1}; i <= objects.at("money"); i++) {
+    bool randomPosition = false;
     std::shared_ptr<Money> pMoney = std::make_shared<Money>();
     std::string sectionName = "money_" + std::to_string(i);
     ini::Section section = doc.getSection(sectionName);
-    pMoney->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+    if (section.at("Position_x") != "random" && section.at("Position_y") != "random") {
+      pMoney->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+    }
+    else {
+      randomPosition = true;
+    }
     pMoney->setVisibility(std::stoul(section.at("Visibility")));
     mObjects.push_back(std::move(pMoney));
+    // Push object with the random placement
+    if (randomPosition) {
+      mRandomObjects.push_back(mObjects.back());
+    }
   }
   // Create ladder objects
   for (size_t i{1}; i <= objects.at("ladder"); i++) {
@@ -134,6 +146,18 @@ void ObjectManager::createObjects(const std::string& filename)
     pTrap->setDifficulty(std::stoul(section.at("Difficulty")));
     pTrap->setVisibility(std::stoul(section.at("Visibility")));
     mObjects.push_back(std::move(pTrap));
+  }
+}
+
+void ObjectManager::createRandomObjects(Map& map)
+{
+  RandomPlacement rp(map);
+  std::vector<GameData::Position> positions = rp.place();
+  auto iter = positions.begin();
+  // Place objects with the random placement
+  for (auto& item : mRandomObjects) {
+    item->setPosition({ iter->first, iter->second });
+    iter++;
   }
 }
 

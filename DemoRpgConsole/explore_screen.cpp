@@ -469,6 +469,8 @@ std::string ExploreScreen::showLocationInfo()
 
 void ExploreScreen::changeMap()
 {
+  // Load a new current map 
+  mCurrentMap = mLevel.getCurrentMap();
   // Check if the player has visited the current map already
   if (mLevelManager.isVisited()) {
     mEnemyManager.createEnemies(mLevelManager.loadEnemies());
@@ -477,11 +479,13 @@ void ExploreScreen::changeMap()
   }
   else {
     mEnemyManager.createEnemies(mLevel.getCurrentEnemyListFilename());
-    mObjectManager.createObjects(mLevel.getCurrentObjectListFilename());
+    mCurrentMap.setEnemies(mEnemyManager.getEnemies());
     mNpcManager.createNpcs(mLevel.getCurrentNPCListFilename());
+    mCurrentMap.setNpcs(mNpcManager.getNpcs());
+    mObjectManager.createObjects(mLevel.getCurrentObjectListFilename());
+    mCurrentMap.setObjects(mObjectManager.getObjects());
+    mObjectManager.createRandomObjects(mCurrentMap);
   }
-  // Load a new current map 
-  mCurrentMap = mLevel.getCurrentMap();
   mPlayer.spawn(mLevel.getPlayerSpawnPosition());
   mState = GameplayState::START;
   // Share map's data with the CurrentMapData clas

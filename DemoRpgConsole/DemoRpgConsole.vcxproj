@@ -55,6 +55,7 @@
     <ClInclude Include="player.h" />
     <ClInclude Include="player_screen.h" />
     <ClInclude Include="potion.h" />
+    <ClInclude Include="random_placement.h" />
     <ClInclude Include="ranged_battle.h" />
     <ClInclude Include="rp_stats.h" />
     <ClInclude Include="screen.h" />
@@ -100,6 +101,7 @@
     <ClCompile Include="player.cpp" />
     <ClCompile Include="player_screen.cpp" />
     <ClCompile Include="potion.cpp" />
+    <ClCompile Include="random_placement.cpp" />
     <ClCompile Include="ranged_battle.cpp" />
     <ClCompile Include="rp_stats.cpp" />
     <ClCompile Include="screen_manager.cpp" />

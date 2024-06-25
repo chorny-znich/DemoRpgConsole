@@ -13,6 +13,7 @@ private:
   size_t mId;
   GameData::TextMap mTextMap;
   GameData::LocationMap mLocationMap;
+  GameData::LocationMap mBeginLocationMap;
   GameData::TextMap mRenderMap;
    
   sf::Vector2u mMapSize;
@@ -25,6 +26,7 @@ public:
   void createRenderMap();
   void render(); 
   GameData::LocationMap& getMap();
+  GameData::LocationMap& getBeginMap();
   sf::Vector2u getMapSize() const;
   Location& getCurrentLocation(GameData::Position pos); 
   void setPlayer(GameData::Position pos); 

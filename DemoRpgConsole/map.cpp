@@ -85,6 +85,7 @@ void Map::setObjects(const std::vector<std::shared_ptr<GameObject>>& objects)
       mRenderMap[object->getPosition().second][object->getPosition().first] = object->getSymbol();
       mLocationMap[object->getPosition().second * mMapSize.x + object->getPosition().first].setObject(true);
     }  
+    mBeginLocationMap[object->getPosition().second * mMapSize.x + object->getPosition().first].setObject(true);
   }
 }
 
@@ -120,6 +121,7 @@ void Map::createMap(const std::string& filename)
       else if (ch == MapSymbols::DOOR_LOCKED) {
         newLocation.setBarrier(true);
       }
+      mBeginLocationMap.push_back(newLocation);
       mLocationMap.push_back(std::move(newLocation));
       x++;
     }
@@ -130,6 +132,11 @@ void Map::createMap(const std::string& filename)
 GameData::LocationMap& Map::getMap()
 {
   return mLocationMap;
+}
+
+GameData::LocationMap& Map::getBeginMap()
+{
+  return mBeginLocationMap;
 }
 
 sf::Vector2u Map::getMapSize() const
