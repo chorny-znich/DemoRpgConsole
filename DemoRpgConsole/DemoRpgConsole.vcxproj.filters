@@ -52,18 +52,24 @@
     <Filter Include="Исходные файлы\Entity">
       <UniqueIdentifier>{bb608cf6-c168-492c-bc84-2665ccad6478}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Object">
+      <UniqueIdentifier>{e579c1d9-92b6-4d59-baae-2655575bc40f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Utility">
+      <UniqueIdentifier>{7cee6fd9-8f89-4d5e-942d-b6689cf8f964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Object">
+      <UniqueIdentifier>{0569b3e9-d236-48b9-b547-38f45b8a04ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Utility">
+      <UniqueIdentifier>{3810d1a2-dbe2-48f4-b390-0f79bc229669}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="armor.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="battle.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="battle_action.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="battle_screen.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="console_ui.h">
@@ -81,16 +87,7 @@
     <ClInclude Include="enemy.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="engine.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="entity.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="equipment.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="game_object.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="game_object_type.h">
@@ -99,28 +96,13 @@
     <ClInclude Include="game_state.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="hero_creation_screen.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="inventory.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="inventory_screen.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="ladder.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="level_manager.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="map_symbols.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="menu_screen.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="money.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="npc.h">
@@ -132,37 +114,16 @@
     <ClInclude Include="player.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="player_screen.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="potion.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="ranged_battle.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="rp_stats.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="screen.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="screen_manager.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="shop.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="shop_screen.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="stats.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="trap.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="weapon.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="location.h">
@@ -183,27 +144,72 @@
     <ClInclude Include="explore_screen.h">
       <Filter>Файлы заголовков\Screen</Filter>
     </ClInclude>
-    <ClInclude Include="random_placement.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="object_manager.h">
-      <Filter>Файлы заголовков\Entity</Filter>
-    </ClInclude>
     <ClInclude Include="enemy_manager.h">
       <Filter>Файлы заголовков\Entity</Filter>
     </ClInclude>
+    <ClInclude Include="menu_screen.h">
+      <Filter>Файлы заголовков\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="screen_manager.h">
+      <Filter>Файлы заголовков\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="screen.h">
+      <Filter>Файлы заголовков\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="object_manager.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>Файлы заголовков\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="potion.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="weapon.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="trap.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="armor.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="hero_creation_screen.h">
+      <Filter>Файлы заголовков\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="inventory_screen.h">
+      <Filter>Файлы заголовков\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="game_object.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="level_manager.h">
+      <Filter>Файлы заголовков\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="random_placement.h">
+      <Filter>Файлы заголовков\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="shop_screen.h">
+      <Filter>Файлы заголовков\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="battle_screen.h">
+      <Filter>Файлы заголовков\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="money.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="player_screen.h">
+      <Filter>Файлы заголовков\Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="engine.h">
+      <Filter>Файлы заголовков\Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="armor.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="battle.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="battle_action.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="battle_screen.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="console_ui.cpp">
@@ -218,52 +224,25 @@
     <ClCompile Include="door.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="enemy.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="engine.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="entity.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="equipment.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="game_object.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="game_state.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="hero_creation_screen.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="inventory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="inventory_screen.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="ladder.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="weapon.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="trap.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="stats.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="shop_screen.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="shop.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="screen_manager.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="rp_stats.cpp">
@@ -272,25 +251,10 @@
     <ClCompile Include="ranged_battle.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="potion.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="player_screen.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="player.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="npc_manager.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="npc.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="money.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="menu_screen.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -314,14 +278,62 @@
     <ClCompile Include="data.cpp">
       <Filter>Исходные файлы\Data</Filter>
     </ClCompile>
-    <ClCompile Include="random_placement.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="object_manager.cpp">
-      <Filter>Исходные файлы\Entity</Filter>
-    </ClCompile>
     <ClCompile Include="enemy_manager.cpp">
       <Filter>Исходные файлы\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="object_manager.cpp">
+      <Filter>Исходные файлы\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy.cpp">
+      <Filter>Исходные файлы\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="armor.cpp">
+      <Filter>Исходные файлы\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="money.cpp">
+      <Filter>Исходные файлы\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="trap.cpp">
+      <Filter>Исходные файлы\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="weapon.cpp">
+      <Filter>Исходные файлы\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="game_object.cpp">
+      <Filter>Исходные файлы\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="hero_creation_screen.cpp">
+      <Filter>Исходные файлы\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="screen_manager.cpp">
+      <Filter>Исходные файлы\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="inventory_screen.cpp">
+      <Filter>Исходные файлы\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="random_placement.cpp">
+      <Filter>Исходные файлы\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="potion.cpp">
+      <Filter>Исходные файлы\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="shop_screen.cpp">
+      <Filter>Исходные файлы\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>Исходные файлы\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="battle_screen.cpp">
+      <Filter>Исходные файлы\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="npc.cpp">
+      <Filter>Исходные файлы\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="npc_manager.cpp">
+      <Filter>Исходные файлы\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_screen.cpp">
+      <Filter>Исходные файлы\Screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

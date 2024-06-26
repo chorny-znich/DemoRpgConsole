@@ -64,6 +64,7 @@ void ObjectManager::createObjects(const std::string& filename)
   }
   // Create potion objects
   for (size_t i{1}; i <= objects.at("potion"); i++) {
+    bool randomPosition = false;
     std::string sectionName = "potion_" + std::to_string(i);
     ini::Section section = doc.getSection(sectionName);
     if (section.at("Type") == "HEALING_POTION") {
@@ -72,10 +73,19 @@ void ObjectManager::createObjects(const std::string& filename)
       std::shared_ptr<HealingPotion> pPotion = std::make_shared<HealingPotion>();
       pPotion->setId(itemId);
       pPotion->setName(object->getName());
-      pPotion->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+      if (section.at("Position_x") != "random" && section.at("Position_y") != "random") {
+        pPotion->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+      }
+      else {
+        randomPosition = true;
+      }
       pPotion->setPrice(object->getPrice());
       pPotion->setVisibility(std::stoul(section.at("Visibility")));
       mObjects.push_back(std::move(pPotion));
+      // Push object with the random placement
+      if (randomPosition) {
+        mRandomObjects.push_back(mObjects.back());
+      }
     }
   }
   // Create weapon objects
@@ -110,6 +120,7 @@ void ObjectManager::createObjects(const std::string& filename)
   }
   // Create armor objects
   for (size_t i{ 1 }; i <= objects.at("armor"); i++) {
+    bool randomPosition = false;
     std::string sectionName = "armor_" + std::to_string(i);
     ini::Section section = doc.getSection(sectionName);
     if (section.at("Type") == "ARMOR") {
@@ -119,10 +130,19 @@ void ObjectManager::createObjects(const std::string& filename)
       pArmor->setId(itemId);
       pArmor->setName(object->getName());
       pArmor->setArmor(object->getArmor());
-      pArmor->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+      if (section.at("Position_x") != "random" && section.at("Position_y") != "random") {
+        pArmor->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+      }
+      else {
+        randomPosition = true;
+      }
       pArmor->setPrice(object->getPrice());
       pArmor->setVisibility(std::stoul(section.at("Visibility")));
       mObjects.push_back(std::move(pArmor));
+      // Push object with the random placement
+      if (randomPosition) {
+        mRandomObjects.push_back(mObjects.back());
+      }
     }
   }
   // Create door objects

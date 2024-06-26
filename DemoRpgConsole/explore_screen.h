@@ -65,6 +65,7 @@ private:
 	bool checkVisibility(size_t value);
 	void saveGame();
 	void shoot();
+	bool fellTrap();
 
 public:
 	ExploreScreen();

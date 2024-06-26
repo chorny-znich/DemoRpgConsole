@@ -7,26 +7,26 @@ Position_x=8
 Position_y=6
 
 [enemy_2]
-Id=1
+Id=2
 Position_x=24
 Position_y=5
 
 [enemy_3]
-Id=1
+Id=2
 Position_x=20
 Position_y=5
 
 [enemy_4]
-Id=2
+Id=3
 Position_x=25
 Position_y=2
 
 [enemy_5]
-Id=2
+Id=3
 Position_x=13
 Position_y=3
 
 [enemy_6]
-Id=1
+Id=2
 Position_x=17
 Position_y=1

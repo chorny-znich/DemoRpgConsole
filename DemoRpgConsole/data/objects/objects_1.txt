@@ -62,7 +62,7 @@ Type=WEAPON
 Visibility=8
 
 [weapon_2]
-Id=102
+Id=101
 Position_x=random
 Position_y=random
 Type=WEAPON

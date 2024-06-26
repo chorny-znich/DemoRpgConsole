@@ -84,7 +84,12 @@ void Map::setObjects(const std::vector<std::shared_ptr<GameObject>>& objects)
     if (object->isVisible()) {
       mRenderMap[object->getPosition().second][object->getPosition().first] = object->getSymbol();
       mLocationMap[object->getPosition().second * mMapSize.x + object->getPosition().first].setObject(true);
-    }  
+    }
+    else {
+      if (object->getType() == GameObjectType::TRAP) {
+        mLocationMap[object->getPosition().second * mMapSize.x + object->getPosition().first].setObject(true);
+      }
+    }
     mBeginLocationMap[object->getPosition().second * mMapSize.x + object->getPosition().first].setObject(true);
   }
 }

@@ -9,6 +9,7 @@
 #include "potion.h"
 #include "weapon.h"
 #include "armor.h"
+#include "trap.h"
 #include "battle.h"
 #include "screen_manager.h" 
 #include "game_state.h"
@@ -100,6 +101,29 @@ void ExploreScreen::update()
         mBattleAction.setCurrentEnemy(&enemy);
         showBattle();
         mState = GameplayState::PLAYER_ATTACK;
+      }
+      else if (fellTrap()) {
+        GameData::Position currentPlayerLocation = { mPlayer.getPosition().first + mPlayer.getMovement().first,
+          mPlayer.getPosition().second + mPlayer.getMovement().second };
+        Location& location = mCurrentMap.getCurrentLocation(currentPlayerLocation);
+        std::shared_ptr<GameObject> pObject = mObjectManager.getObject(currentPlayerLocation);
+        auto pTrapObject = std::static_pointer_cast<Trap>(pObject);
+        size_t trapDamage = dr::EngineUtility::getRandomInRange(pTrapObject->getDamage().x,
+          pTrapObject->getDamage().y);
+        mPlayer.decreaseHealth(trapDamage);
+        // Move the hero
+        mCurrentMap.clearPlayer(mPlayer.getPosition());
+        mPlayer.setDangerStatus(false);
+        mPlayer.update();
+        // Remove the trap
+        location.setObject(false);
+        mObjectManager.destroyObject(currentPlayerLocation);
+        location.setSymbol(' ');
+        // Show information in logs
+        mConsoleUI.addToHud(UI_Type::LOCATION_INFO, showLocationInfo(), 0);
+        mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You got {} damage from the trap", trapDamage), 1);
+
+        mState = GameplayState::PLAYER_TURN_SHOW;
       }
       else if (mPlayer.isShooting()) {
         ScreenManager::createBattleScreen(GameData::BattleType::RANGED);
@@ -486,6 +510,7 @@ void ExploreScreen::changeMap()
     mObjectManager.createObjects(mLevel.getCurrentObjectListFilename());
     mCurrentMap.setObjects(mObjectManager.getObjects());
     mObjectManager.createRandomObjects(mCurrentMap);
+    mCurrentMap.setObjects(mObjectManager.getObjects());
   }
   mPlayer.spawn(mLevel.getPlayerSpawnPosition());
   mState = GameplayState::START;
@@ -545,4 +570,28 @@ void ExploreScreen::saveGame()
 void ExploreScreen::shoot()
 {
   mPlayer.shooting(true);
+}
+/**
+ * @brief Check if the player fell into a trap
+ * @return Result of checking
+*/
+bool ExploreScreen::fellTrap()
+{
+  bool result = false;
+  GameData::Position currentPlayerLocation = { mPlayer.getPosition().first + mPlayer.getMovement().first,
+          mPlayer.getPosition().second + mPlayer.getMovement().second };
+  Location& location = mCurrentMap.getCurrentLocation(currentPlayerLocation);
+  if (location.isObject()) {
+    try {
+      std::shared_ptr<GameObject> pObject = mObjectManager.getObject(currentPlayerLocation);
+      if (pObject->getType() == GameObjectType::TRAP) {
+        auto pTrapObject = std::static_pointer_cast<Trap>(pObject);
+        result = true;
+      }
+    }
+    catch (std::runtime_error re) {
+      std::cout << std::format("{} in showLocationInfo()\n", re.what());
+    }
+  }
+  return result;
 }
