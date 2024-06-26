@@ -34,12 +34,12 @@ Id=106
 Position_x=2
 Position_y=1
 Type=WEAPON
-Visibility=1
+Visibility=111
 
 [trap_1]
 Name=Trap
-Position_x=1
-Position_y=2
+Position_x=random
+Position_y=random
 Min_damage=1
 Max_damage=3
 Difficulty=1

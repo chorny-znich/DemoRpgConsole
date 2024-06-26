@@ -117,6 +117,8 @@
     <Text Include="data\enemies\enemies_2.txt" />
     <Text Include="data\enemies\enemies_3.txt" />
     <Text Include="data\enemies\enemies_5.txt" />
+    <Text Include="data\enemy_list.txt" />
+    <Text Include="data\items.txt" />
     <Text Include="data\maps\map_0.txt" />
     <Text Include="data\maps\map_1.txt" />
     <Text Include="data\maps\map_2.txt" />

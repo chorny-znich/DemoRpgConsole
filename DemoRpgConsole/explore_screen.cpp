@@ -471,6 +471,7 @@ void ExploreScreen::changeMap()
 {
   // Load a new current map 
   mCurrentMap = mLevel.getCurrentMap();
+  mCurrentMap.createRenderMap();
   // Check if the player has visited the current map already
   if (mLevelManager.isVisited()) {
     mEnemyManager.createEnemies(mLevelManager.loadEnemies());

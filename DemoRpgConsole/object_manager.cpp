@@ -80,6 +80,7 @@ void ObjectManager::createObjects(const std::string& filename)
   }
   // Create weapon objects
   for (size_t i{ 1 }; i <= objects.at("weapon"); i++) {
+    bool randomPosition = false;
     std::string sectionName = "weapon_" + std::to_string(i);
     ini::Section section = doc.getSection(sectionName);
     if (section.at("Type") == "WEAPON") {
@@ -90,12 +91,21 @@ void ObjectManager::createObjects(const std::string& filename)
       pWeapon->setId(itemId);
       pWeapon->setName(object->getName());
       pWeapon->setDamage(object->getDamage());
-      pWeapon->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) }); 
+      if (section.at("Position_x") != "random" && section.at("Position_y") != "random") {
+        pWeapon->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+      }
+      else {
+        randomPosition = true;
+      } 
       pWeapon->setWeaponType(object->getWeaponType());
       pWeapon->setWeaponDistance(object->getWeaponDistance());
       pWeapon->setPrice(object->getPrice());
       pWeapon->setVisibility(std::stoul(section.at("Visibility")));
       mObjects.push_back(std::move(pWeapon));
+      // Push object with the random placement
+      if (randomPosition) {
+        mRandomObjects.push_back(mObjects.back());
+      }
     }
   }
   // Create armor objects
@@ -137,15 +147,25 @@ void ObjectManager::createObjects(const std::string& filename)
   }
   // Create trap objects
   for (size_t i{ 1 }; i <= objects.at("trap"); i++) {
+    bool randomPosition = false;
     std::shared_ptr<Trap> pTrap = std::make_shared<Trap>();
     std::string sectionName = "trap_" + std::to_string(i);
     ini::Section section = doc.getSection(sectionName);
     pTrap->setName(section.at("Name"));
-    pTrap->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+    if (section.at("Position_x") != "random" && section.at("Position_y") != "random") {
+      pTrap->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+    }
+    else {
+      randomPosition = true;
+    }
     pTrap->setDamage({ std::stoul(section.at("Min_damage")), std::stoul(section.at("Max_damage")) });
     pTrap->setDifficulty(std::stoul(section.at("Difficulty")));
     pTrap->setVisibility(std::stoul(section.at("Visibility")));
     mObjects.push_back(std::move(pTrap));
+    // Push object with the random placement
+    if (randomPosition) {
+      mRandomObjects.push_back(mObjects.back());
+    }
   }
 }
 

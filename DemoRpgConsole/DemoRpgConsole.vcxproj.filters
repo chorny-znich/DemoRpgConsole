@@ -394,5 +394,11 @@
     <Text Include="data\todo.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
+    <Text Include="data\enemy_list.txt">
+      <Filter>Файлы ресурсов\Enemy</Filter>
+    </Text>
+    <Text Include="data\items.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>

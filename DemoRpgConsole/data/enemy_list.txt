@@ -1,8 +1,21 @@
 [general]
-Enemies_amount=6
+Enemies_amount=7
 
 [enemy_1]
 Id=1
+Name=Cobold
+Experience_for_kill=2
+Health=3
+Attack=0
+Defence=6
+Damage_min=1
+Damage_max=1
+Position_x=
+Position_y=
+Symbol=c
+
+[enemy_2]
+Id=2
 Name=Weak Goblin
 Experience_for_kill=5
 Health=4
@@ -14,8 +27,8 @@ Position_x=
 Position_y=
 Symbol=g
 
-[enemy_2]
-Id=2
+[enemy_3]
+Id=3
 Name=Goblin
 Experience_for_kill=8
 Health=6
@@ -27,8 +40,8 @@ Position_x=
 Position_y=
 Symbol=g
 
-[enemy_3]
-Id=3
+[enemy_4]
+Id=4
 Name=Big Goblin
 Experience_for_kill=12
 Health=9
@@ -40,8 +53,8 @@ Position_x=
 Position_y=
 Symbol=G
 
-[enemy_4]
-Id=4
+[enemy_5]
+Id=5
 Name=Weak Orc
 Experience_for_kill=15
 Health=10
@@ -53,8 +66,8 @@ Position_x=
 Position_y=
 Symbol=O
 
-[enemy_5]
-Id=5
+[enemy_6]
+Id=6
 Name=Orc
 Experience_for_kill=20
 Health=10
@@ -66,7 +79,7 @@ Position_x=
 Position_y=
 Symbol=O
 
-[enemy_6]
+[enemy_7]
 Id=6
 Name=Strong Orc
 Experience_for_kill=25
