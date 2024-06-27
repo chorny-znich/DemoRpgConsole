@@ -16,10 +16,11 @@ private:
     "Intellect",
     "Charisma"
   };
-  std::array<std::string, 3> mSecondaryStatsList{
+  std::array<std::string, 4> mSecondaryStatsList{
     "Attack",
     "Defence",
-    "Attention"
+    "Attention",
+    "Reaction"
   };
   size_t SKILLS_NUMBER{ 3 };
   std::array<std::string, 3> mSkillsList{

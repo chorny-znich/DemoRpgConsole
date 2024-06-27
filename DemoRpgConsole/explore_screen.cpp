@@ -108,10 +108,22 @@ void ExploreScreen::update()
         Location& location = mCurrentMap.getCurrentLocation(currentPlayerLocation);
         std::shared_ptr<GameObject> pObject = mObjectManager.getObject(currentPlayerLocation);
         auto pTrapObject = std::static_pointer_cast<Trap>(pObject);
-        size_t trapDamage = dr::EngineUtility::getRandomInRange(pTrapObject->getDamage().x,
-          pTrapObject->getDamage().y);
-        mPlayer.decreaseHealth(trapDamage);
-        // Move the hero
+        // Check if the hero evade a trap
+        std::string result{};
+        size_t rollDice = dr::EngineUtility::getRandomInRange(GameData::DICE.x, GameData::DICE.y);
+        mConsoleUI.addToHud(UI_Type::GAME_LOG,
+          std::format("Stat: {} + Roll: {} vs Difficulty: {}", mPlayer.getSecondaryStatValue("Reaction"),
+            rollDice, pTrapObject->getDifficulty()), 2);
+        if (mPlayer.getSecondaryStatValue("Reaction") + rollDice < pTrapObject->getDifficulty()) {
+          size_t trapDamage = dr::EngineUtility::getRandomInRange(pTrapObject->getDamage().x,
+            pTrapObject->getDamage().y);
+          mPlayer.decreaseHealth(trapDamage);
+          mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You got {} damage from the trap", trapDamage), 1);
+        }
+        else {
+          mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You evade damage from the trap"), 1);
+        }
+                // Move the hero
         mCurrentMap.clearPlayer(mPlayer.getPosition());
         mPlayer.setDangerStatus(false);
         mPlayer.update();
@@ -121,7 +133,6 @@ void ExploreScreen::update()
         location.setSymbol(' ');
         // Show information in logs
         mConsoleUI.addToHud(UI_Type::LOCATION_INFO, showLocationInfo(), 0);
-        mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You got {} damage from the trap", trapDamage), 1);
 
         mState = GameplayState::PLAYER_TURN_SHOW;
       }

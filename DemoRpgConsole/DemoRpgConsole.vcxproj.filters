@@ -64,6 +64,18 @@
     <Filter Include="Файлы заголовков\Utility">
       <UniqueIdentifier>{3810d1a2-dbe2-48f4-b390-0f79bc229669}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\RP system">
+      <UniqueIdentifier>{e7160319-2982-46fe-ba97-1433ba89fc45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\RP system">
+      <UniqueIdentifier>{659f77e5-b370-4eb0-999d-d6a7247550b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Hero">
+      <UniqueIdentifier>{2bcaf766-bbff-4216-96bc-e636a54cafa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Engine">
+      <UniqueIdentifier>{1b5ecf91-09bd-499e-be89-73e0b35a296b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="battle.h">
@@ -79,9 +91,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="CurrentMapData.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="door.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="enemy.h">
@@ -115,9 +124,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="ranged_battle.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="rp_stats.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="shop.h">
@@ -204,6 +210,12 @@
     <ClInclude Include="engine.h">
       <Filter>Файлы заголовков\Engine</Filter>
     </ClInclude>
+    <ClInclude Include="rp_stats.h">
+      <Filter>Файлы заголовков\RP system</Filter>
+    </ClInclude>
+    <ClInclude Include="door.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="battle.cpp">
@@ -224,9 +236,6 @@
     <ClCompile Include="door.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="engine.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="equipment.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -236,16 +245,10 @@
     <ClCompile Include="inventory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ladder.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="stats.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="shop.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="rp_stats.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="ranged_battle.cpp">
@@ -254,13 +257,7 @@
     <ClCompile Include="player_screen.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="player.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="level_manager.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="location.cpp">
@@ -334,6 +331,21 @@
     </ClCompile>
     <ClCompile Include="menu_screen.cpp">
       <Filter>Исходные файлы\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="ladder.cpp">
+      <Filter>Исходные файлы\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="level_manager.cpp">
+      <Filter>Исходные файлы\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Исходные файлы\Hero</Filter>
+    </ClCompile>
+    <ClCompile Include="rp_stats.cpp">
+      <Filter>Исходные файлы\RP system</Filter>
+    </ClCompile>
+    <ClCompile Include="engine.cpp">
+      <Filter>Исходные файлы\Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -410,6 +422,9 @@
       <Filter>Файлы ресурсов\Enemy</Filter>
     </Text>
     <Text Include="data\items.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="data\player.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>

@@ -12,6 +12,7 @@ const size_t MAX_HEALTH_MODIFIER = 3;
 const float ATTACK_MODIFIER = 0.5;
 const float DEFENCE_MODIFIER = 1.5;
 const float ATTENTION_MODIFIER = 0.5;
+const float REACTION_MODIFIER = 0.5;
 
 class RPStats
 {
@@ -37,7 +38,8 @@ protected:
 	std::unordered_map<std::string, size_t> mSecondaryStats{
 		{"Attack", 0},
 		{"Defence", 0},
-		{"Attention", 0 }
+		{"Attention", 0 },
+		{"Reaction", 0}
 	};
 	std::unordered_map<std::string, size_t> mSkills {
 		{"Search", 0},

@@ -136,6 +136,7 @@
     <Text Include="data\objects\objects_3.txt" />
     <Text Include="data\objects\objects_4.txt" />
     <Text Include="data\objects\objects_5.txt" />
+    <Text Include="data\player.txt" />
     <Text Include="data\todo.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

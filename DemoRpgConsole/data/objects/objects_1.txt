@@ -98,5 +98,5 @@ Position_x=random
 Position_y=random
 Min_damage=1
 Max_damage=3
-Difficulty=1
+Difficulty=9
 Visibility=5

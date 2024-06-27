@@ -183,6 +183,7 @@ void RPStats::showSecondaryStats() const
 	std::cout << std::format("  Attack - {}\n", getSecondaryStatValue("Attack"));
 	std::cout << std::format("  Defence - {}\n", getSecondaryStatValue("Defence"));
 	std::cout << std::format("  Attention - {}\n", getSecondaryStatValue("Attention"));
+	std::cout << std::format("  Reaction - {}\n", getSecondaryStatValue("Reaction"));
 	std::cout << "\n";
 }
 

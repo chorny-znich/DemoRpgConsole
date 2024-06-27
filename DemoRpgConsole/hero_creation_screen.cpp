@@ -34,6 +34,8 @@ void HeroCreationScreen::calcSecondaryStats()
   mPlayer.setMaxHealth(mPlayer.getPrimaryStatValue("Stamina") * MAX_HEALTH_MODIFIER);
   mPlayer.setSecondaryStatValue("Attack", std::floor(mPlayer.getPrimaryStatValue("Strength") * ATTACK_MODIFIER));
   mPlayer.setSecondaryStatValue("Defence", std::floor(mPlayer.getPrimaryStatValue("Dexterity") * DEFENCE_MODIFIER));
+  mPlayer.setSecondaryStatValue("Reaction", std::floor((mPlayer.getPrimaryStatValue("Dexterity") +
+    mPlayer.getPrimaryStatValue("Perception")) * REACTION_MODIFIER));
   mPlayer.updateAttention();
 }
 

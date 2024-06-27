@@ -42,5 +42,5 @@ Position_x=1
 Position_y=3
 Min_damage=1
 Max_damage=3
-Difficulty=1
+Difficulty=90
 Visibility=5

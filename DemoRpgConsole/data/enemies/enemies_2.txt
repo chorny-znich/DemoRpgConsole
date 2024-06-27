@@ -12,7 +12,7 @@ Position_x=24
 Position_y=5
 
 [enemy_3]
-Id=2
+Id=1
 Position_x=20
 Position_y=5
 
