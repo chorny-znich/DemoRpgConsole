@@ -40,11 +40,11 @@ private:
 		{3, "South"},
 		{4, "West"}
 	};
-	std::map<size_t, Location*> mHeroEnvironment{
-		{1, nullptr},
-		{2, nullptr},
-		{3, nullptr},
-		{4, nullptr}
+	std::map<Direction, Location*> mHeroEnvironment{
+		{Direction::NORTH, nullptr},
+		{Direction::EAST, nullptr},
+		{Direction::SOUTH, nullptr},
+		{Direction::WEST, nullptr}
 	};
 	enum class Action {
 		DISARM_TRAP,
@@ -63,6 +63,7 @@ private:
 		PLAYER_INPUT,
 		PLAYER_TURN,
 		PLAYER_ATTACK,
+		PLAYER_ACT,
 		PLAYER_TURN_SHOW,
 		ENEMY_TURN,
 		ENEMY_TURN_SHOW
@@ -104,6 +105,7 @@ private:
 	void saveGame();
 	void shoot();
 	bool fellTrap();
+	bool disarmTrap(GameData::Position pos);
 
 public:
 	ExploreScreen();

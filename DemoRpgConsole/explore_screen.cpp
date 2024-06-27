@@ -87,6 +87,24 @@ void ExploreScreen::inputHandler()
         break;
       }
       mState = GameplayState::PLAYER_TURN;
+
+      for (auto& actionItem : mHeroAction) {
+        char actionCmd = static_cast<char>(actionItem.first);
+        if (cmd == actionCmd) {
+          Action action = actionItem.second.second;
+          if (action == Action::DISARM_TRAP) {
+            Direction dir = actionItem.second.first;
+            Location* loc = mHeroEnvironment[dir];
+            if (disarmTrap(loc->getPosition())) {
+
+            }
+            else {
+
+            }
+          }
+          mState = GameplayState::PLAYER_ACT;
+        }
+      }
     }
   }
 }
@@ -164,6 +182,9 @@ void ExploreScreen::update()
     if (!enemy.isActive()) {
       mCurrentMap.clearEnemy(enemy.getPosition());
     }
+    mState = GameplayState::PLAYER_TURN_SHOW;
+  }
+  else if (mState == GameplayState::PLAYER_ACT) {
     mState = GameplayState::PLAYER_TURN_SHOW;
   }
   if (mState == GameplayState::ENEMY_TURN) {
@@ -571,10 +592,10 @@ void ExploreScreen::checkEnvironment(GameData::Position pos)
 */
 void ExploreScreen::checkHeroEnvironment(GameData::Position pos)
 {
-  mHeroEnvironment[1] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second - 1 });
-  mHeroEnvironment[2] = &mCurrentMap.getCurrentLocation({ pos.first + 1, pos.second });
-  mHeroEnvironment[3] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second + 1 });
-  mHeroEnvironment[4] = &mCurrentMap.getCurrentLocation({ pos.first - 1, pos.second });
+  mHeroEnvironment[Direction::NORTH] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second - 1 });
+  mHeroEnvironment[Direction::EAST] = &mCurrentMap.getCurrentLocation({ pos.first + 1, pos.second });
+  mHeroEnvironment[Direction::SOUTH] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second + 1 });
+  mHeroEnvironment[Direction::WEST] = &mCurrentMap.getCurrentLocation({ pos.first - 1, pos.second });
 
   for (const auto& item : mHeroEnvironment) {
     GameData::Position locPosition = item.second->getPosition();
@@ -585,7 +606,7 @@ void ExploreScreen::checkHeroEnvironment(GameData::Position pos)
       }
       if (pObject->isVisible() && pObject->getType() == GameObjectType::TRAP) {
         size_t currentCommandNumber = mConsoleUI.getCurrentCommandNumber() + 1;
-        mHeroAction[currentCommandNumber] = {mDirection[item.first], Action::DISARM_TRAP};
+        mHeroAction[currentCommandNumber] = {item.first, Action::DISARM_TRAP};
         mConsoleUI.addCommand(std::format("{}. {}", currentCommandNumber, mActionList[Action::DISARM_TRAP]));
       }
     }
@@ -633,6 +654,31 @@ bool ExploreScreen::fellTrap()
     catch (std::runtime_error re) {
       std::cout << std::format("{} in showLocationInfo()\n", re.what());
     }
+  }
+  return result;
+}
+
+/**
+ * @brief Hero try to disarm a trap
+ * @return checking result 
+*/
+bool ExploreScreen::disarmTrap(GameData::Position pos)
+{
+  bool result = false;
+  std::shared_ptr<GameObject> pObject = mObjectManager.getObject(pos);
+  auto pTrapObject = std::static_pointer_cast<Trap>(pObject);
+  size_t difficulty = pTrapObject->getDifficulty();
+  size_t skillValue = mPlayer.getSkillValue("Deft hands");
+  std::string resultString{};
+  size_t rollDice = dr::EngineUtility::getRandomInRange(GameData::DICE.x, GameData::DICE.y);
+  mConsoleUI.addToHud(UI_Type::GAME_LOG,
+    std::format("Skill: {} + Roll: {} vs Difficulty: {}", skillValue, rollDice, difficulty), 2);
+  if (skillValue + rollDice >= difficulty) {
+    result = true;
+    mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You disarmed a trap"), 1);
+  }
+  else {
+    mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You didn't disarm a trap"), 1);
   }
   return result;
 }
