@@ -76,6 +76,15 @@
     <Filter Include="Исходные файлы\Engine">
       <UniqueIdentifier>{1b5ecf91-09bd-499e-be89-73e0b35a296b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Hero">
+      <UniqueIdentifier>{8b98e2d6-d819-4676-9366-2480a8156c3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\UI">
+      <UniqueIdentifier>{4b302e5d-8add-4880-8809-29e078cbd548}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\UI">
+      <UniqueIdentifier>{d128d1fe-2ff8-45b5-afe8-d39c777c859c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="battle.h">
@@ -84,40 +93,19 @@
     <ClInclude Include="battle_action.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="console_ui.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="current_npc.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="CurrentMapData.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="enemy.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="equipment.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="game_object_type.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="game_state.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="inventory.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="ladder.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="map_symbols.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="npc.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="npc_manager.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="player.h">
@@ -216,6 +204,27 @@
     <ClInclude Include="door.h">
       <Filter>Файлы заголовков\Object</Filter>
     </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>Файлы заголовков\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="equipment.h">
+      <Filter>Файлы заголовков\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="game_state.h">
+      <Filter>Файлы заголовков\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="console_ui.h">
+      <Filter>Файлы заголовков\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ladder.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="npc.h">
+      <Filter>Файлы заголовков\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="npc_manager.h">
+      <Filter>Файлы заголовков\Entity</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="battle.cpp">
@@ -224,16 +233,10 @@
     <ClCompile Include="battle_action.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="console_ui.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="current_npc.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="CurrentMapData.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="door.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="equipment.cpp">
@@ -252,9 +255,6 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="ranged_battle.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="player_screen.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -346,6 +346,15 @@
     </ClCompile>
     <ClCompile Include="engine.cpp">
       <Filter>Исходные файлы\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="door.cpp">
+      <Filter>Исходные файлы\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="player_screen.cpp">
+      <Filter>Исходные файлы\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="console_ui.cpp">
+      <Filter>Исходные файлы\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

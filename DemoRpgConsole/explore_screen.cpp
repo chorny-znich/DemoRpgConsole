@@ -35,6 +35,7 @@ void ExploreScreen::inputHandler()
   if (mState == GameplayState::PLAYER_INPUT) { 
     if (_kbhit()) {
       mConsoleUI.clear();
+      mConsoleUI.clearCommandString();
       system("cls");
       int cmd = _getch();
       switch (cmd) {
@@ -127,6 +128,7 @@ void ExploreScreen::update()
         mCurrentMap.clearPlayer(mPlayer.getPosition());
         mPlayer.setDangerStatus(false);
         mPlayer.update();
+        checkHeroEnvironment(mPlayer.getPosition());
         // Remove the trap
         location.setObject(false);
         mObjectManager.destroyObject(currentPlayerLocation);
@@ -144,6 +146,7 @@ void ExploreScreen::update()
         mCurrentMap.clearPlayer(mPlayer.getPosition()); 
         mPlayer.setDangerStatus(false);
         mPlayer.update();
+        checkHeroEnvironment(mPlayer.getPosition());
         mConsoleUI.addToHud(UI_Type::GAME_LOG, "", 1);
         mConsoleUI.addToHud(UI_Type::LOCATION_INFO, showLocationInfo(), 0);
         mState = GameplayState::PLAYER_TURN_SHOW;
@@ -524,6 +527,7 @@ void ExploreScreen::changeMap()
     mCurrentMap.setObjects(mObjectManager.getObjects());
   }
   mPlayer.spawn(mLevel.getPlayerSpawnPosition());
+  checkHeroEnvironment(mPlayer.getPosition());
   mState = GameplayState::START;
   // Share map's data with the CurrentMapData clas
 
@@ -561,13 +565,39 @@ void ExploreScreen::checkEnvironment(GameData::Position pos)
     }
   }
 }
+/**
+ * @brief Check four locations that surrounds a hero
+ * @param pos Hero's coords 
+*/
+void ExploreScreen::checkHeroEnvironment(GameData::Position pos)
+{
+  mHeroEnvironment[1] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second - 1 });
+  mHeroEnvironment[2] = &mCurrentMap.getCurrentLocation({ pos.first + 1, pos.second });
+  mHeroEnvironment[3] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second + 1 });
+  mHeroEnvironment[4] = &mCurrentMap.getCurrentLocation({ pos.first - 1, pos.second });
+
+  for (const auto& item : mHeroEnvironment) {
+    GameData::Position locPosition = item.second->getPosition();
+    if (item.second->isObject()) {
+      auto pObject = mObjectManager.getObject(locPosition);
+      if (!pObject->isVisible() && checkVisibility(pObject->getVisibility())) {
+        pObject->setVisibleStatus(true);
+      }
+      if (pObject->isVisible() && pObject->getType() == GameObjectType::TRAP) {
+        size_t currentCommandNumber = mConsoleUI.getCurrentCommandNumber() + 1;
+        mHeroAction[currentCommandNumber] = {mDirection[item.first], Action::DISARM_TRAP};
+        mConsoleUI.addCommand(std::format("{}. {}", currentCommandNumber, mActionList[Action::DISARM_TRAP]));
+      }
+    }
+  }
+}
 
 bool ExploreScreen::checkVisibility(size_t value)
 {
   size_t randomValue = dr::EngineUtility::getRandomInRange(GameData::DICE.x, GameData::DICE.y);
-  mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("Search Skill:{} Dice:{} Value to check:{} ???\n", 
+ /* mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("Search Skill:{} Dice:{} Value to check:{} ???\n",
     mPlayer.getSecondaryStatValue("Attention"),
-    randomValue, value), 0);
+    randomValue, value), 0);*/
   return (mPlayer.getSecondaryStatValue("Attention") + randomValue >= value) ? true : false;
 }
 

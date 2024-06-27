@@ -49,10 +49,8 @@ void ConsoleUI::display(UI_Type type)
 void ConsoleUI::displayCommandString()
 {
   std::cout << "Your action:\n";
-  size_t counter{ 1 };
   for (const auto& str : mCommandsList) {
-    std::cout << std::format("{}. {}\n", counter, str);
-    counter++;
+    std::cout << str << '\n';
   }
 }
 
@@ -64,6 +62,11 @@ void ConsoleUI::addCommand(std::string cmd)
 void ConsoleUI::clearCommandString()
 {
   mCommandsList.clear();
+}
+
+size_t ConsoleUI::getCurrentCommandNumber() const
+{
+  return mCommandsList.size();
 }
 
 void ConsoleUI::clear()

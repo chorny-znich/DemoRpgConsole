@@ -16,10 +16,47 @@
 #include "current_npc.h"
 #include "game_data.h"
 #include "CurrentMapData.h"
+#include <map>
 
 class ExploreScreen : public Screen
 {	
 private:
+	enum class Direction {
+		NORTH,
+		EAST,
+		SOUTH,
+		WEST,
+		NONE
+	};
+	std::map<size_t, Direction> mDirection{
+		{1, Direction::NORTH},
+		{2, Direction::EAST},
+		{3, Direction::SOUTH},
+		{4, Direction::WEST}
+	};
+	std::map<size_t, std::string> mDirectionString{
+		{1, "North"},
+		{2, "East"},
+		{3, "South"},
+		{4, "West"}
+	};
+	std::map<size_t, Location*> mHeroEnvironment{
+		{1, nullptr},
+		{2, nullptr},
+		{3, nullptr},
+		{4, nullptr}
+	};
+	enum class Action {
+		DISARM_TRAP,
+		NONE
+	};
+	Action mAction;
+
+	std::map<Action, std::string> mActionList{
+		{Action::DISARM_TRAP, "Disarm trap"}
+	};
+	std::map<size_t, std::pair<Direction, Action>> mHeroAction;
+
 	enum class GameplayState 
 	{
 		START,
@@ -62,6 +99,7 @@ private:
 	std::string showLocationInfo();
 	void changeMap();
 	void checkEnvironment(GameData::Position pos);
+	void checkHeroEnvironment(GameData::Position pos);
 	bool checkVisibility(size_t value);
 	void saveGame();
 	void shoot();

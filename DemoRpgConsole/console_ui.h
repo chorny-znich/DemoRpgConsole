@@ -26,5 +26,6 @@ public:
   void displayCommandString();
   void addCommand(std::string cmd);
   void clearCommandString();
+  size_t getCurrentCommandNumber() const;
   void clear();
 };
