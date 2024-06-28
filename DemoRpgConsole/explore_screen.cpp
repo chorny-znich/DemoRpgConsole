@@ -89,17 +89,24 @@ void ExploreScreen::inputHandler()
       mState = GameplayState::PLAYER_TURN;
 
       for (auto& actionItem : mHeroAction) {
-        char actionCmd = static_cast<char>(actionItem.first);
+        char actionCmd = actionItem.first + 48;
         if (cmd == actionCmd) {
           Action action = actionItem.second.second;
           if (action == Action::DISARM_TRAP) {
             Direction dir = actionItem.second.first;
             Location* loc = mHeroEnvironment[dir];
             if (disarmTrap(loc->getPosition())) {
-
+              // Remove the trap
+              loc->setObject(false);
+              mObjectManager.destroyObject(loc->getPosition());
+              loc->setSymbol(' ');
+              // Show information in logs
+              mConsoleUI.addToHud(UI_Type::LOCATION_INFO, showLocationInfo(), 0);
+              mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You disarmed a trap"), 1);
             }
             else {
-
+              mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You can't disarm a trap"), 1);
+              checkHeroEnvironment(mPlayer.getPosition());
             }
           }
           mState = GameplayState::PLAYER_ACT;

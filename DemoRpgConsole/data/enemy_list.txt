@@ -1,5 +1,5 @@
 [general]
-Enemies_amount=7
+Enemies_amount=9
 
 [enemy_1]
 Id=1
@@ -80,7 +80,7 @@ Position_y=
 Symbol=O
 
 [enemy_7]
-Id=6
+Id=7
 Name=Strong Orc
 Experience_for_kill=25
 Health=12
@@ -91,3 +91,29 @@ Damage_max=6
 Position_x=
 Position_y=
 Symbol=O
+
+[enemy_8]
+Id=8
+Name=Skeleton
+Experience_for_kill=25
+Health=9
+Attack=4
+Defence=9
+Damage_min=2
+Damage_max=5
+Position_x=
+Position_y=
+Symbol=s
+
+[enemy_9]
+Id=9
+Name=Big skeleton
+Experience_for_kill=35
+Health=12
+Attack=5
+Defence=10
+Damage_min=3
+Damage_max=5
+Position_x=
+Position_y=
+Symbol=S

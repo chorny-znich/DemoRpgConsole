@@ -116,6 +116,7 @@
     <Text Include="data\enemies\enemies_1.txt" />
     <Text Include="data\enemies\enemies_2.txt" />
     <Text Include="data\enemies\enemies_3.txt" />
+    <Text Include="data\enemies\enemies_4.txt" />
     <Text Include="data\enemies\enemies_5.txt" />
     <Text Include="data\enemy_list.txt" />
     <Text Include="data\items.txt" />
@@ -125,6 +126,7 @@
     <Text Include="data\maps\map_3.txt" />
     <Text Include="data\maps\map_4.txt" />
     <Text Include="data\maps\map_5.txt" />
+    <Text Include="data\maps\map_6.txt" />
     <Text Include="data\npc\npc_0.txt" />
     <Text Include="data\npc\npc_1.txt" />
     <Text Include="data\npc\npc_2.txt" />
