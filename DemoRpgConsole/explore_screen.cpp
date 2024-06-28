@@ -623,9 +623,9 @@ void ExploreScreen::checkHeroEnvironment(GameData::Position pos)
 bool ExploreScreen::checkVisibility(size_t value)
 {
   size_t randomValue = dr::EngineUtility::getRandomInRange(GameData::DICE.x, GameData::DICE.y);
- /* mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("Search Skill:{} Dice:{} Value to check:{} ???\n",
+  mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("Search Skill:{} Dice:{} Value to check:{} ???\n",
     mPlayer.getSecondaryStatValue("Attention"),
-    randomValue, value), 0);*/
+    randomValue, value), 0);
   return (mPlayer.getSecondaryStatValue("Attention") + randomValue >= value) ? true : false;
 }
 

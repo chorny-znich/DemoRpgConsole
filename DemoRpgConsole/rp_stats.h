@@ -44,7 +44,8 @@ protected:
 	std::unordered_map<std::string, size_t> mSkills {
 		{"Search", 0},
 		{"Athletic", 0},
-		{"Dodge", 0 }
+		{"Dodge", 0 },
+		{"Deft hands", 0}
 	};
 
 	std::string mName{ "Vargar" };

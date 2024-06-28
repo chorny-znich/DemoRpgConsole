@@ -18,8 +18,8 @@ Position_y=random
 Visibility=7
 
 [money_3]
-Position_x=6
-Position_y=1
+Position_x=random
+Position_y=random
 Visibility=7
 
 [money_4]

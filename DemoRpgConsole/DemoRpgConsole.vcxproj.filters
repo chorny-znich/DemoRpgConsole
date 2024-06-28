@@ -87,27 +87,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="battle.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="battle_action.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="CurrentMapData.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="game_object_type.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ranged_battle.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="shop.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="stats.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="location.h">
       <Filter>Файлы заголовков\Map</Filter>
     </ClInclude>
@@ -225,29 +204,29 @@
     <ClInclude Include="map_symbols.h">
       <Filter>Файлы заголовков\Map</Filter>
     </ClInclude>
+    <ClInclude Include="battle.h">
+      <Filter>Файлы заголовков\RP system</Filter>
+    </ClInclude>
+    <ClInclude Include="battle_action.h">
+      <Filter>Файлы заголовков\RP system</Filter>
+    </ClInclude>
+    <ClInclude Include="CurrentMapData.h">
+      <Filter>Файлы заголовков\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="game_object_type.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ranged_battle.h">
+      <Filter>Файлы заголовков\RP system</Filter>
+    </ClInclude>
+    <ClInclude Include="shop.h">
+      <Filter>Файлы заголовков\RP system</Filter>
+    </ClInclude>
+    <ClInclude Include="stats.h">
+      <Filter>Файлы заголовков\Data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="battle.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="battle_action.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="current_npc.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="CurrentMapData.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="stats.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="shop.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="ranged_battle.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -355,6 +334,27 @@
     </ClCompile>
     <ClCompile Include="equipment.cpp">
       <Filter>Исходные файлы\Hero</Filter>
+    </ClCompile>
+    <ClCompile Include="CurrentMapData.cpp">
+      <Filter>Исходные файлы\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="battle.cpp">
+      <Filter>Исходные файлы\RP system</Filter>
+    </ClCompile>
+    <ClCompile Include="battle_action.cpp">
+      <Filter>Исходные файлы\RP system</Filter>
+    </ClCompile>
+    <ClCompile Include="ranged_battle.cpp">
+      <Filter>Исходные файлы\RP system</Filter>
+    </ClCompile>
+    <ClCompile Include="shop.cpp">
+      <Filter>Исходные файлы\RP system</Filter>
+    </ClCompile>
+    <ClCompile Include="stats.cpp">
+      <Filter>Исходные файлы\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="current_npc.cpp">
+      <Filter>Исходные файлы\Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -24,7 +24,7 @@ InventoryScreen::InventoryScreen() :
 void InventoryScreen::showInventory()
 {
   std::cout << mInventory.show();
-  std::cout << std::format("\n{}. Exit\n\n", mInventorySize + 1);
+  std::cout << std::format("\n0. Exit\n\n");
 }
 
 void InventoryScreen::showEquipment()
@@ -51,7 +51,7 @@ void InventoryScreen::inputHandler()
     if (_kbhit()) {
       if (mState == States::SHOW_LIST) {
         const int EXIT_NUMBER = mInventorySize + 1;
-        const char EXIT_NUMBER_CODE = 48 + EXIT_NUMBER;
+        const char EXIT_NUMBER_CODE = 48;
         int menuItemCode{ _getch() };
         int menuItem = menuItemCode - '0';
 
@@ -59,7 +59,7 @@ void InventoryScreen::inputHandler()
           system("cls");
           GameState::destroyScreen();
         }
-        else if (menuItemCode > EXIT_NUMBER_CODE || menuItemCode < '1') {
+        else if (menuItemCode > '9' || menuItemCode < '1') {
           std::cout << "Choose valid menu item\n\n";
         }
         else {

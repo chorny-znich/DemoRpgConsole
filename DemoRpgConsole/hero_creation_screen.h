@@ -22,11 +22,12 @@ private:
     "Attention",
     "Reaction"
   };
-  size_t SKILLS_NUMBER{ 3 };
-  std::array<std::string, 3> mSkillsList{
+  size_t SKILLS_NUMBER{ 4 };
+  std::array<std::string, 4> mSkillsList{
     "Search",
     "Athletic",
-    "Dodge"
+    "Dodge",
+    "Deft hands"
   };
 
 private:

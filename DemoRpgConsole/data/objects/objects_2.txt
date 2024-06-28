@@ -103,7 +103,7 @@ Id=102
 Position_x=23
 Position_y=5
 Type=WEAPON
-Visibility=10
+Visibility=9
 
 [armor_1]
 Id=500
@@ -117,7 +117,7 @@ Id=500
 Position_x=random
 Position_y=random
 Type=ARMOR
-Visibility=8
+Visibility=9
 
 [door_1]
 Name=Door

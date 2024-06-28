@@ -5,7 +5,7 @@ Potion_amount=0
 Weapon_amount=2
 Armor_amount=0
 Door_amount=0
-Trap_amount=1
+Trap_amount=0
 
 [money_1]
 Position_x=random
@@ -24,8 +24,8 @@ Visibility=1
 
 [weapon_1]
 Id=100
-Position_x=3
-Position_y=1
+Position_x=random
+Position_y=random
 Type=WEAPON
 Visibility=7
 
@@ -35,12 +35,3 @@ Position_x=2
 Position_y=1
 Type=WEAPON
 Visibility=111
-
-[trap_1]
-Name=Trap
-Position_x=1
-Position_y=3
-Min_damage=1
-Max_damage=3
-Difficulty=9
-Visibility=1
