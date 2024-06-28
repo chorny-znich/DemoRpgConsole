@@ -1,0 +1,2 @@
+When the enemy is in the location with corps, the hero attack the corps instead of the enemy
+When the player takes damage from the trap he don't die even if his Health less or equal zero

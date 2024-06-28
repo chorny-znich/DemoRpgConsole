@@ -442,5 +442,8 @@
     <Text Include="data\enemies\enemies_4.txt">
       <Filter>Файлы ресурсов\Enemy</Filter>
     </Text>
+    <Text Include="data\bugs.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>

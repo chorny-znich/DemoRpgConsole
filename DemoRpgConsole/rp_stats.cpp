@@ -262,4 +262,5 @@ void RPStats::updateStatsFromSkills()
 {
 	updateMaxHealth();
 	updateDefence();
+	updateAttention();
 }
