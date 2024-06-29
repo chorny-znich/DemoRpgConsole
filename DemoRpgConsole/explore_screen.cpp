@@ -144,6 +144,10 @@ void ExploreScreen::update()
           size_t trapDamage = dr::EngineUtility::getRandomInRange(pTrapObject->getDamage().x,
             pTrapObject->getDamage().y);
           mPlayer.decreaseHealth(trapDamage);
+          if (mPlayer.getHealth() <= 0) {
+            mConsoleUI.addToHud(UI_Type::GAME_LOG, "You killed by the trap", 1);
+            GameState::destroyAllScreens();
+          } 
           mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You got {} damage from the trap", trapDamage), 1);
         }
         else {

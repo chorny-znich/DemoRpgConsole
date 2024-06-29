@@ -110,14 +110,14 @@ Id=500
 Position_x=23
 Position_y=1
 Type=ARMOR
-Visibility=9
+Visibility=10
 
 [armor_2]
 Id=500
 Position_x=random
 Position_y=random
 Type=ARMOR
-Visibility=9
+Visibility=10
 
 [door_1]
 Name=Door

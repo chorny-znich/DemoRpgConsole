@@ -7,21 +7,21 @@ Damage_max=1
 Position_x=1
 Position_y=1
 Symbol=@
-Money=21
+Money=28
 
 [Primary stats]
 Strength=6
 Stamina=4
-Dexterity=7
+Dexterity=6
 Perception=3
-Intellect=3
+Intellect=4
 Charisma=7
 
 [Secondary stats]
 Attack=3
-Defence=10
+Defence=9
 Attention=1
-Reaction=5
+Reaction=4
 
 [Skills]
 Search=0
