@@ -203,6 +203,7 @@ void ExploreScreen::update()
     mConsoleUI.addToHud(UI_Type::GAME_LOG, std::string{ std::format("") }, 2);
     for (auto& enemy : enemies) {
       if (enemy.isActive()) {
+        //enemy.checkEnvironment(enemy.getPosition(), mCurrentMap);
         // the enemy is near the player
         if (checkPlayerNearby(enemy.getPosition())) {
           enemy.setBattleStatus(true);

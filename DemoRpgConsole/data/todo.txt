@@ -6,6 +6,10 @@ Ranged weapon appear in the game.
 	+ The hero can evade a trap with the Reaction secondary stat
 	+ The hero can disactivate a trap that he found with the Disarm Trap skill
 Enemy AI
+	The enemy knows locations in 1 tile near him
+	The enemy attacks player near him
+	The enemy has a line of sight as a secondary stat
+	The enemy moves to a player when he see him
 
 Version 0.3.0
 Doors can be hidden and the hero must check Attention stat to find them
