@@ -203,7 +203,14 @@ void ExploreScreen::update()
     mConsoleUI.addToHud(UI_Type::GAME_LOG, std::string{ std::format("") }, 2);
     for (auto& enemy : enemies) {
       if (enemy.isActive()) {
-        //enemy.checkEnvironment(enemy.getPosition(), mCurrentMap);
+        std::map<GameData::Direction, Location*> locations;
+        auto pos = enemy.getPosition();
+        locations[GameData::Direction::NORTH] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second - 1 });
+        locations[GameData::Direction::EAST] = &mCurrentMap.getCurrentLocation({ pos.first + 1, pos.second });
+        locations[GameData::Direction::SOUTH] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second + 1 });
+        locations[GameData::Direction::WEST] = &mCurrentMap.getCurrentLocation({ pos.first - 1, pos.second });
+
+        enemy.checkEnvironment(locations);
         // the enemy is near the player
         if (checkPlayerNearby(enemy.getPosition())) {
           enemy.setBattleStatus(true);

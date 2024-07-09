@@ -1,2 +1,7 @@
 [general]
-Enemies_amount=0
+Enemies_amount=1
+
+[enemy_1]
+Id=1
+Position_x=5
+Position_y=1
