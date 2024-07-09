@@ -6,6 +6,16 @@ Enemy::Enemy()
   setMaxHealth(10);
 }
 
+void Enemy::chooseAction()
+{
+  setBattleStatus(false);
+  for (auto dir : mEntityEnvironment) {
+    if (dir.second->isPlayer()) {
+      setBattleStatus(true);
+    }
+  }
+}
+
 void Enemy::move()
 {
   size_t decision = dr::EngineUtility::getRandomInRange(1, 11);

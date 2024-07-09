@@ -203,21 +203,15 @@ void ExploreScreen::update()
     mConsoleUI.addToHud(UI_Type::GAME_LOG, std::string{ std::format("") }, 2);
     for (auto& enemy : enemies) {
       if (enemy.isActive()) {
+        // The enemy checks the environment
         std::map<GameData::Direction, Location*> locations;
         auto pos = enemy.getPosition();
         locations[GameData::Direction::NORTH] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second - 1 });
         locations[GameData::Direction::EAST] = &mCurrentMap.getCurrentLocation({ pos.first + 1, pos.second });
         locations[GameData::Direction::SOUTH] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second + 1 });
         locations[GameData::Direction::WEST] = &mCurrentMap.getCurrentLocation({ pos.first - 1, pos.second });
-
         enemy.checkEnvironment(locations);
-        // the enemy is near the player
-        if (checkPlayerNearby(enemy.getPosition())) {
-          enemy.setBattleStatus(true);
-        }
-        else {
-          enemy.setBattleStatus(false);
-        }
+        enemy.chooseAction();
         // enemy attack player
         if (enemy.isInBattle()) {
           Battle battle(mPlayer, enemy);
@@ -284,32 +278,6 @@ void ExploreScreen::render()
       mState = GameplayState::ENEMY_TURN;
     }
   }
-}
-
-bool ExploreScreen::checkPlayerNearby(GameData::Position pos)
-{
-  GameData::LocationMap& map = mCurrentMap.getMap();
-  const size_t RowSize = mCurrentMap.getMapSize().x;
-  size_t index = pos.second * RowSize + pos.first;
-  bool battleStatus{ false };
-  // check if the player left of the enemy
-  if ((index % (RowSize) != 0) && (map.at(index - 1).isPlayer())) {
-    battleStatus = true;
-  }
-  // check if the player right of the enemy
-  else if ((index % (RowSize + 1) != 0)  && (map.at(index + 1).isPlayer())) {
-    battleStatus = true;
-  }
-  // check if the player above the enemy
-  else if ((index >= RowSize) && (map.at(index - RowSize).isPlayer())) {
-    battleStatus = true;
-  }
-  // check if the player below the enemy
-  else if ((index < mCurrentMap.getMapSize().y * RowSize - RowSize) && (map.at(index + RowSize).isPlayer())) {
-    battleStatus = true;
-  }
-  
-  return battleStatus;
 }
 
 bool ExploreScreen::collisionDetection(GameData::Position pos, GameData::Movement move)

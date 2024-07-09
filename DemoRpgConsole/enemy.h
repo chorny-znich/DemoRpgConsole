@@ -11,6 +11,7 @@ private:
   
 public:
   Enemy();
+  void chooseAction();
   void move();
   void update();
   void isDead();  
