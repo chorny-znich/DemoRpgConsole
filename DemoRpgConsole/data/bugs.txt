@@ -1,3 +1,4 @@
-When the enemy is in the location with corps, the hero attack the corps instead of the enemy
+When the enemy is in the location with the corps, the hero attacks it instead of the enemy
 ? When the player takes damage from the trap he don't die even if his Health less or equal zero
 The game is crushing when the  player use '1' key when it is no trap to disarm
+? When you choose your action in battle, the key numbers before actions don't appear

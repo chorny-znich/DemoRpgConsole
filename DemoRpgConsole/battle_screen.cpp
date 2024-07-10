@@ -21,9 +21,9 @@ void BattleScreen::init()
     mConsoleUI.addCommand("Shoot West");
   }
   else {
-    mConsoleUI.addCommand("Attack");
+    mConsoleUI.addCommand("1. Attack");
     if (BattleAction::getPlayer().getSecondaryStatValue("Attack") >= STRONG_ATTACK_MODIFIER) {
-      mConsoleUI.addCommand("Strong attack");
+      mConsoleUI.addCommand("2. Strong attack");
     }
   }
 }
@@ -43,6 +43,7 @@ void BattleScreen::inputHandler()
         }
         break;
       }
+      system("cls");
       GameState::destroyScreen();
     }
     if (mBattleType == GameData::BattleType::RANGED) {
