@@ -85,6 +85,7 @@ void Data::init()
     enemy.setSecondaryStatValue("Defence", std::stoul(section.at("Defence")));
     enemy.setHealth(std::stoul(section.at("Health")));
     enemy.setDamage({ std::stoul(section.at("Damage_min")), std::stoul(section.at("Damage_max")) });
+    enemy.setSight(std::stoul(section.at("Sight")));
     mEnemyDatabase.insert({ i, std::move(enemy) });
   }
 }

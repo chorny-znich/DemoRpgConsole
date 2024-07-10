@@ -6,6 +6,7 @@
 class Enemy : public Entity, public RPStats
 {
 private: 
+  size_t mSight{ 0 };
   bool mInBattle{ false };
   bool mDead{ false };
   
@@ -14,6 +15,8 @@ public:
   void chooseAction();
   void move();
   void update();
+  void setSight(size_t value);
+  size_t getSight() const;
   void isDead();  
   void setBattleStatus(bool status);
   bool isInBattle() const;

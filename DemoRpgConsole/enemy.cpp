@@ -42,6 +42,16 @@ void Enemy::update()
   mPosition.second += mMovement.second;
 }
 
+void Enemy::setSight(size_t value)
+{
+  mSight = value;
+}
+
+size_t Enemy::getSight() const
+{
+  return mSight;
+}
+
 void Enemy::isDead()
 {
   mDead = true;

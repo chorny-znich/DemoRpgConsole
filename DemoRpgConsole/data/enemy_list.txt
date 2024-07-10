@@ -13,6 +13,7 @@ Damage_max=1
 Position_x=
 Position_y=
 Symbol=c
+Sight=1
 
 [enemy_2]
 Id=2
@@ -26,6 +27,7 @@ Damage_max=2
 Position_x=
 Position_y=
 Symbol=g
+Sight=2
 
 [enemy_3]
 Id=3
@@ -39,6 +41,7 @@ Damage_max=2
 Position_x=
 Position_y=
 Symbol=g
+Sight=2
 
 [enemy_4]
 Id=4
@@ -52,6 +55,7 @@ Damage_max=4
 Position_x=
 Position_y=
 Symbol=G
+Sight=2
 
 [enemy_5]
 Id=5
@@ -65,6 +69,7 @@ Damage_max=4
 Position_x=
 Position_y=
 Symbol=O
+Sight=3
 
 [enemy_6]
 Id=6
@@ -78,6 +83,7 @@ Damage_max=5
 Position_x=
 Position_y=
 Symbol=O
+Sight=3
 
 [enemy_7]
 Id=7
@@ -91,6 +97,7 @@ Damage_max=6
 Position_x=
 Position_y=
 Symbol=O
+Sight=3
 
 [enemy_8]
 Id=8
@@ -104,6 +111,7 @@ Damage_max=5
 Position_x=
 Position_y=
 Symbol=s
+Sight=4
 
 [enemy_9]
 Id=9
@@ -117,3 +125,4 @@ Damage_max=5
 Position_x=
 Position_y=
 Symbol=S
+Sight=4

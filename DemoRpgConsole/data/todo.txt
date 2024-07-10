@@ -13,7 +13,8 @@ Ranged weapon appear in the game.
 Enemy AI
 	+ The enemy knows locations in 1 tile near him
 	+ The enemy attacks player near him
-	The enemy has a line of sight as a secondary stat
+	+ The enemy has a line of sight as a stat
+	The enemy knows locations depending on his Sight stat
 	The enemy moves to a player when he see him
 
 Version 0.3.0

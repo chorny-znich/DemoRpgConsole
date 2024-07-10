@@ -25,6 +25,7 @@ void EnemyManager::createEnemies(const std::string& filename)
     enemy.setSecondaryStatValue("Defence", enemyRef.getSecondaryStatValue("Defence"));
     enemy.setHealth(enemyRef.getHealth());
     enemy.setDamage(enemyRef.getDamage());
+    enemy.setSight(enemyRef.getSight());
     mEnemies.push_back(std::move(enemy));
   }
 }
