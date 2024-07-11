@@ -2,7 +2,7 @@
 
 #include "game_data.h"
 #include "location.h"
-//#include "map.h"
+#include <vector>
 #include <map>
 
 /**
@@ -18,11 +18,11 @@ protected:
   GameData::Movement mMovement{ 0, 0 };
   char mSymbol;
   
-  std::map<GameData::Direction, Location*> mEntityEnvironment{
-    {GameData::Direction::NORTH, nullptr},
-    {GameData::Direction::EAST, nullptr},
-    {GameData::Direction::SOUTH, nullptr},
-    {GameData::Direction::WEST, nullptr}
+  std::map<GameData::Direction, std::vector<Location*>> mEntityEnvironment{
+    {GameData::Direction::NORTH, {}},
+    {GameData::Direction::EAST, {}},
+    {GameData::Direction::SOUTH, {}},
+    {GameData::Direction::WEST, {}}
   };
   
 public:
@@ -34,5 +34,5 @@ public:
   void setSymbol(char ch);
   char getSymbol() const; 
 
-  void checkEnvironment(std::map<GameData::Direction, Location*>& locations);
+  void checkEnvironment(std::map<GameData::Direction, std::vector<Location*>>& locations);
 };

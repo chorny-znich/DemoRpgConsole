@@ -204,12 +204,36 @@ void ExploreScreen::update()
     for (auto& enemy : enemies) {
       if (enemy.isActive()) {
         // The enemy checks the environment
-        std::map<GameData::Direction, Location*> locations;
+        std::map<GameData::Direction, std::vector<Location*>> locations;
         auto pos = enemy.getPosition();
-        locations[GameData::Direction::NORTH] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second - 1 });
-        locations[GameData::Direction::EAST] = &mCurrentMap.getCurrentLocation({ pos.first + 1, pos.second });
-        locations[GameData::Direction::SOUTH] = &mCurrentMap.getCurrentLocation({ pos.first, pos.second + 1 });
-        locations[GameData::Direction::WEST] = &mCurrentMap.getCurrentLocation({ pos.first - 1, pos.second });
+        for (size_t i = 1; i <= enemy.getSight(); i++) {
+          Location* pLoc = &mCurrentMap.getCurrentLocation({ pos.first, pos.second - i });
+          locations[GameData::Direction::NORTH].push_back(pLoc);
+          if (pLoc->isBarrier()) {
+            break;
+          }
+        }
+        for (size_t i = 1; i <= enemy.getSight(); i++) {
+          Location* pLoc = &mCurrentMap.getCurrentLocation({ pos.first + i, pos.second });
+          locations[GameData::Direction::EAST].push_back(pLoc);
+          if (pLoc->isBarrier()) {
+            break;
+          }
+        }
+        for (size_t i = 1; i <= enemy.getSight(); i++) {
+          Location* pLoc = &mCurrentMap.getCurrentLocation({ pos.first, pos.second + i });
+          locations[GameData::Direction::SOUTH].push_back(pLoc);
+          if (pLoc->isBarrier()) {
+            break;
+          }
+        }
+        for (size_t i = 1; i <= enemy.getSight(); i++) {
+          Location* pLoc = &mCurrentMap.getCurrentLocation({ pos.first - i, pos.second });
+          locations[GameData::Direction::WEST].push_back(pLoc);
+          if (pLoc->isBarrier()) {
+            break;
+          }
+        }
         enemy.checkEnvironment(locations);
         enemy.chooseAction();
         // enemy attack player

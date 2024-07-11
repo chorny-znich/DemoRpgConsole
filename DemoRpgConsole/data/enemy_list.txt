@@ -13,7 +13,7 @@ Damage_max=1
 Position_x=
 Position_y=
 Symbol=c
-Sight=1
+Sight=2
 
 [enemy_2]
 Id=2

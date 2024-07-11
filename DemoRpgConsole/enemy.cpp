@@ -10,7 +10,7 @@ void Enemy::chooseAction()
 {
   setBattleStatus(false);
   for (auto dir : mEntityEnvironment) {
-    if (dir.second->isPlayer()) {
+    if (dir.second.front()->isPlayer()) {
       setBattleStatus(true);
     }
   }
