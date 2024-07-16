@@ -10,6 +10,7 @@
 const size_t START_STATS_POINTS = 24;
 const size_t MAX_HEALTH_MODIFIER = 3;
 const float ATTACK_MODIFIER = 0.5;
+const float RANGED_ATTACK_MODIFIER = 0.25;
 const float DEFENCE_MODIFIER = 1.5;
 const float ATTENTION_MODIFIER = 0.5;
 const float REACTION_MODIFIER = 0.5;
@@ -37,6 +38,7 @@ protected:
 	};
 	std::unordered_map<std::string, size_t> mSecondaryStats{
 		{"Attack", 0},
+		{"Ranged attack", 0},
 		{"Defence", 0},
 		{"Attention", 0 },
 		{"Reaction", 0}

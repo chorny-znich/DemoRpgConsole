@@ -20,5 +20,8 @@ Enemy AI
 Version 0.3.0
 -------------
 Doors can be hidden and the hero must check Attention stat to find them
+Loot
+	The hero can find wood
+	The hero can find iron
 Craft
 	The hero can craft arrows

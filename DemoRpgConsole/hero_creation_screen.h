@@ -16,8 +16,9 @@ private:
     "Intellect",
     "Charisma"
   };
-  std::array<std::string, 4> mSecondaryStatsList{
+  std::array<std::string, 5> mSecondaryStatsList{
     "Attack",
+    "Ranged attack",
     "Defence",
     "Attention",
     "Reaction"

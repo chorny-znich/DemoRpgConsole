@@ -2,6 +2,8 @@
 #include "weapon.h"
 #include <iostream>
 #include <format>
+#include <memory>
+#include <DisRealityGF.h>
 
 RangedBattle::RangedBattle(GameData::Direction dir) :
   mPlayer{CurrentMapData::getPlayer()},
@@ -43,6 +45,24 @@ std::string RangedBattle::shoot()
       size_t position = startIndex + i * (direction.x + direction.y * static_cast<int>(mapSize.x));
       // a case when the hero hit an enemy
       if (mLocations.at(position).isEnemy()) {
+        // check if the player hit the enemy
+        Enemy* currentEnemy;
+        for (auto& enemy : mEnemies) {
+          if (enemy.getPosition().first + enemy.getPosition().second * static_cast<int>(mapSize.x) ==
+            position) {
+            currentEnemy = &enemy;
+          }
+        }
+        std::string str{ std::format("You attack {}", currentEnemy->getName()) };
+        int attackMod{ 0 };
+        int damageMod{ 0 };
+        size_t rollAttack = dr::EngineUtility::getRandomInRange(GameData::DICE.x, GameData::DICE.y);
+        resultMessage = std::format(" [dice:{} + Atk:{} + mod: {} vs Enemy Def:{}]\n", rollAttack,
+          mPlayer.getSecondaryStatValue("Ranged attack"), attackMod, currentEnemy->getSecondaryStatValue("Defence"));
+        if (mPlayer.getSecondaryStatValue("Ranged attack") + rollAttack + attackMod >= 
+          currentEnemy->getSecondaryStatValue("Defence")) {
+          size_t damage = mPlayer.getDamageValue();
+          size_t totalDamage = damage + damageMod;
         resultMessage = "You hit an enemy";
         break;
       }

@@ -181,6 +181,7 @@ void RPStats::showSecondaryStats() const
 	std::cout << std::format("  Money - {}\n", getMoney());
 	std::cout << std::format("  Health - {}\n", getMaxHealth());
 	std::cout << std::format("  Attack - {}\n", getSecondaryStatValue("Attack"));
+	std::cout << std::format("  Ranged attack - {}\n", getSecondaryStatValue("Ranged attack"));
 	std::cout << std::format("  Defence - {}\n", getSecondaryStatValue("Defence"));
 	std::cout << std::format("  Attention - {}\n", getSecondaryStatValue("Attention"));
 	std::cout << std::format("  Reaction - {}\n", getSecondaryStatValue("Reaction"));
