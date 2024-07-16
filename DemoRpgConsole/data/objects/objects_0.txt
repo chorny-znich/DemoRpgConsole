@@ -34,4 +34,4 @@ Id=106
 Position_x=2
 Position_y=1
 Type=WEAPON
-Visibility=111
+Visibility=1

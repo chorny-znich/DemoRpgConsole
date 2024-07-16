@@ -14,6 +14,6 @@ private:
   std::vector<Location>& mLocations;
   GameData::Direction mDirection;
 public:
-  RangedBattle();
-  void shoot(GameData::Direction dir);
+  RangedBattle(GameData::Direction dir);
+  std::string shoot();
 };

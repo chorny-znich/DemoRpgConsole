@@ -3,16 +3,16 @@
 #include <iostream>
 #include <format>
 
-RangedBattle::RangedBattle() :
+RangedBattle::RangedBattle(GameData::Direction dir) :
   mPlayer{CurrentMapData::getPlayer()},
   mEnemies{CurrentMapData::getEnemies()},
-  mLocations{CurrentMapData::getMap()}
+  mLocations{CurrentMapData::getMap()},
+  mDirection{dir}
 {
 }
 
-void RangedBattle::shoot(GameData::Direction dir)
+std::string RangedBattle::shoot()
 {
-  mDirection = dir;
   sf::Vector2i direction;
   std::string resultMessage = "You missed a target";
 
@@ -55,6 +55,8 @@ void RangedBattle::shoot(GameData::Direction dir)
     std::cout << "\n" << resultMessage << "\n";
   }
   else {
-    std::cout << "You don't have a ranged weapon\n";
+    resultMessage = "You don't have a ranged weapon\n";
   }
+
+  return resultMessage;
 }

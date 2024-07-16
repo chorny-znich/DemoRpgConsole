@@ -45,7 +45,7 @@ void BattleScreen::inputHandler()
       }
       system("cls");
       GameState::destroyScreen();
-    }
+    }/*
     if (mBattleType == GameData::BattleType::RANGED) {
       RangedBattle rangedBattle;
       switch (menuItem) {
@@ -66,7 +66,7 @@ void BattleScreen::inputHandler()
       std::cin >> s;
       system("cls");
       GameState::destroyScreen();
-    }
+    }*/
   }
 }
 

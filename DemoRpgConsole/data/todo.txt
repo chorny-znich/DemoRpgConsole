@@ -3,7 +3,7 @@ Version 0.2.0
 + Loot can spawn in random places.
 Ranged weapon appear in the game.
 	+ The player can shoot in 4 directions
-	Check if the Hero hit an enemy
+	+ Check if the Hero hit an enemy
 	Deal the damage to an enemy
 	The hero uses supply (arrows) for shooting
 	The hero can find arrows on the level

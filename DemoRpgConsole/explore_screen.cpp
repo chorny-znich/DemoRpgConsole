@@ -13,6 +13,7 @@
 #include "battle.h"
 #include "screen_manager.h" 
 #include "game_state.h"
+#include "ranged_battle.h"
 
 #include <DisRealityGF.h>
 
@@ -32,7 +33,7 @@ void ExploreScreen::init()
 
 void ExploreScreen::inputHandler()
 { 
-  if (mState == GameplayState::PLAYER_INPUT) { 
+  if (mState == GameplayState::PLAYER_INPUT) {
     if (_kbhit()) {
       mConsoleUI.clear();
       mConsoleUI.clearCommandString();
@@ -669,6 +670,9 @@ void ExploreScreen::saveGame()
 void ExploreScreen::shoot(GameData::Direction direction)
 {
   //mPlayer.shooting(true);
+  RangedBattle rangedBattle(direction);
+  mConsoleUI.addToHud(UI_Type::GAME_LOG, rangedBattle.shoot(), 1);
+
   mState = GameplayState::PLAYER_TURN_SHOW;
 }
 /**
