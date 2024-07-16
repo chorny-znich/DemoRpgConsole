@@ -82,9 +82,6 @@ void ExploreScreen::inputHandler()
       case 'f':
         saveGame();
         break;
-      case 'z':
-        shoot();
-        break;
       }
       mState = GameplayState::PLAYER_TURN;
 
@@ -108,6 +105,22 @@ void ExploreScreen::inputHandler()
               mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You can't disarm a trap"), 1);
               checkHeroEnvironment(mPlayer.getPosition());
             }
+          }
+          else if (action == Action::SHOOT_NORTH) {
+            shoot(GameData::Direction::NORTH);
+            std::cout << "Shoot north";
+          }
+          else if (action == Action::SHOOT_EAST) {
+            shoot(GameData::Direction::EAST);
+            std::cout << "Shoot east";
+          }
+          else if (action == Action::SHOOT_SOUTH) {
+            shoot(GameData::Direction::SOUTH);
+            std::cout << "Shoot south";
+          }
+          else if (action == Action::SHOOT_WEST) {
+            shoot(GameData::Direction::WEST);
+            std::cout << "Shoot west";
           }
           mState = GameplayState::PLAYER_ACT;
         }
@@ -620,8 +633,21 @@ void ExploreScreen::checkHeroEnvironment(GameData::Position pos)
         mHeroAction[currentCommandNumber] = {item.first, Action::DISARM_TRAP};
         mConsoleUI.addCommand(std::format("{}. {}", currentCommandNumber, mActionList[Action::DISARM_TRAP]));
       }
+      
     }
   }
+  mConsoleUI.addCommand(std::format("{}. {}", mConsoleUI.getCurrentCommandNumber() + 1, 
+    mActionList[Action::SHOOT_NORTH]));
+  mHeroAction[mConsoleUI.getCurrentCommandNumber()] = { Direction::NORTH, Action::SHOOT_NORTH };
+  mConsoleUI.addCommand(std::format("{}. {}", mConsoleUI.getCurrentCommandNumber() + 1, 
+    mActionList[Action::SHOOT_EAST]));
+  mHeroAction[mConsoleUI.getCurrentCommandNumber()] = { Direction::EAST, Action::SHOOT_EAST };
+  mConsoleUI.addCommand(std::format("{}. {}", mConsoleUI.getCurrentCommandNumber() + 1, 
+    mActionList[Action::SHOOT_SOUTH]));
+  mHeroAction[mConsoleUI.getCurrentCommandNumber()] = { Direction::SOUTH, Action::SHOOT_SOUTH };
+  mConsoleUI.addCommand(std::format("{}. {}", mConsoleUI.getCurrentCommandNumber() + 1, 
+    mActionList[Action::SHOOT_WEST]));
+  mHeroAction[mConsoleUI.getCurrentCommandNumber()] = { Direction::WEST, Action::SHOOT_WEST };
 }
 
 bool ExploreScreen::checkVisibility(size_t value)
@@ -640,9 +666,10 @@ void ExploreScreen::saveGame()
   mInventory.save();
 }
 
-void ExploreScreen::shoot()
+void ExploreScreen::shoot(GameData::Direction direction)
 {
-  mPlayer.shooting(true);
+  //mPlayer.shooting(true);
+  mState = GameplayState::PLAYER_TURN_SHOW;
 }
 /**
  * @brief Check if the player fell into a trap

@@ -47,12 +47,20 @@ private:
 		{Direction::WEST, nullptr}
 	};
 	enum class Action {
+		SHOOT_NORTH,
+		SHOOT_EAST,
+		SHOOT_SOUTH,
+		SHOOT_WEST,
 		DISARM_TRAP,
 		NONE
 	};
 	Action mAction;
 
 	std::map<Action, std::string> mActionList{
+		{Action::SHOOT_NORTH, "Shoot north"},
+		{Action::SHOOT_EAST, "Shoot east"},
+		{Action::SHOOT_SOUTH, "Shoot south"},
+		{Action::SHOOT_WEST, "Shoot west"},
 		{Action::DISARM_TRAP, "Disarm trap"}
 	};
 	std::map<size_t, std::pair<Direction, Action>> mHeroAction;
@@ -102,7 +110,7 @@ private:
 	void checkHeroEnvironment(GameData::Position pos);
 	bool checkVisibility(size_t value);
 	void saveGame();
-	void shoot();
+	void shoot(GameData::Direction direction);
 	bool fellTrap();
 	bool disarmTrap(GameData::Position pos);
 
