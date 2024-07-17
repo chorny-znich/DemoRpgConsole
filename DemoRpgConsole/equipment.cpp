@@ -29,6 +29,10 @@ std::string Equipment::show() const
       result.append(std::format("{} -\n", first));
     }
   }
+  result.append("\nCONSUMABLE:\n");
+  for (auto& [first, second] : mConsumable) {
+    result.append(std::format("{} - {}\n", first, second));
+  }
   result.append("\n\n");
   return result;
 }
@@ -52,4 +56,20 @@ void Equipment::save()
 std::shared_ptr<GameObject> Equipment::getEquipObject(const std::string& id)
 {
     return mEquipment.at(id);
+}
+
+void Equipment::addConsumable(const std::string& id, size_t value)
+{
+  mConsumable.insert({ id, value });
+}
+
+size_t Equipment::getConsumable(const std::string& id) const
+{
+  auto iter = mConsumable.find(id);
+  return iter->second;
+}
+
+bool Equipment::hasConsumable(const std::string& id) const
+{
+  return mConsumable.find(id) != mConsumable.end() ? true : false;
 }

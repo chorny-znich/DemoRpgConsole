@@ -23,11 +23,14 @@ private:
     {"Ranged weapon", nullptr},
     {"Chest", nullptr}
   };
+  std::unordered_map<std::string, size_t> mConsumable;
 
 public:
   void equip(std::shared_ptr<GameObject>);
   std::string show() const;
   void save();
   std::shared_ptr<GameObject> getEquipObject(const std::string& id);
+  void addConsumable(const std::string& id, size_t value);
+  size_t getConsumable(const std::string& id) const;
+  bool hasConsumable(const std::string& id) const;
 };
-
