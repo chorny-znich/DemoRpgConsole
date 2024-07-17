@@ -56,6 +56,7 @@ protected:
 	std::size_t mMoney{ 0 };
 	size_t mBaseDefence{ 0 };
 	sf::Vector2u mDamage{ 0, 0 };
+	sf::Vector2u mRangedDamage{ 0, 0 };
 	size_t mArmor{ 0 };
 	size_t mMaxHealth{ 10 };
 	size_t mBaseMaxHealth{ 10 };
@@ -84,6 +85,9 @@ public:
 	void setDamage(sf::Vector2u dmg);
 	sf::Vector2u getDamage() const;
 	size_t getDamageValue() const;
+	void setRangedDamage(sf::Vector2u rdmg);
+	sf::Vector2u getRangedDamage() const;
+	size_t getRangedDamageValue() const;
 	void setArmor(size_t armor);
 	size_t getArmor() const;
 	void setMaxHealth(size_t value);

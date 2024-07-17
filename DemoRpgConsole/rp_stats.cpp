@@ -100,6 +100,21 @@ size_t RPStats::getDamageValue() const
 	return dr::EngineUtility::getRandomInRange(mDamage.x, mDamage.y);
 }
 
+void RPStats::setRangedDamage(sf::Vector2u rdmg)
+{
+	mRangedDamage = rdmg;
+}
+
+sf::Vector2u RPStats::getRangedDamage() const
+{
+	return mRangedDamage;
+}
+
+size_t RPStats::getRangedDamageValue() const
+{
+	return dr::EngineUtility::getRandomInRange(mRangedDamage.x, mRangedDamage.y);
+}
+
 void RPStats::setArmor(size_t armor)
 {
 	mArmor = armor;

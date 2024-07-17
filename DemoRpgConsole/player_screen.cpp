@@ -20,6 +20,7 @@ void PlayerScreen::showStats()
   std::cout << std::format("HP:{}/{}\n", mPlayer.getHealth(), mPlayer.getMaxHealth());
   std::cout << std::format("Armor:{}\n", mPlayer.getArmor());
   std::cout << std::format("Dmg:{}-{}\n", mPlayer.getDamage().x, mPlayer.getDamage().y);
+  std::cout << std::format("Rng dmg:{}-{}\n", mPlayer.getRangedDamage().x, mPlayer.getRangedDamage().y);
   std::cout << std::format("Skill points:{}\n\n", mPlayer.getSkillPoints());
   mPlayer.showPrimaryStats();
   mPlayer.showSecondaryStats();

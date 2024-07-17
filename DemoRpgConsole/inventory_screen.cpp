@@ -88,6 +88,9 @@ void InventoryScreen::inputHandler()
             if (pWeapon->getWeaponType() == WeaponType::MELEE) {
               mPlayer.setDamage({ pWeapon->getDamage().x, pWeapon->getDamage().y });
             }
+            else if (pWeapon->getWeaponType() == WeaponType::RANGED) {
+              mPlayer.setRangedDamage({ pWeapon->getDamage().x, pWeapon->getDamage().y });
+            }
           }
           else if (pCurrentItem->getType() == GameObjectType::ARMOR) {
             mEquipment.equip(pCurrentItem);
