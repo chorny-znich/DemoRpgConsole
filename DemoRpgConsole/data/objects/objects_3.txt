@@ -6,6 +6,7 @@ Weapon_amount=3
 Armor_amount=2
 Door_amount=7
 Trap_amount=3
+Consumable_amount=2
 
 [money_1]
 Position_x=random
@@ -112,6 +113,13 @@ Position_y=random
 Type=WEAPON
 Visibility=9
 
+[weapon_4]
+Id=106
+Position_x=random
+Position_y=random
+Type=WEAPON
+Visibility=10
+
 [armor_1]
 Id=500
 Position_x=random
@@ -186,17 +194,17 @@ Visibility=1
 Name=Trap
 Position_x=random
 Position_y=random
-Min_damage=1
-Max_damage=3
-Difficulty=1
+Min_damage=2
+Max_damage=6
+Difficulty=10
 Visibility=7
 
 [trap_2]
 Name=Trap
 Position_x=random
 Position_y=random
-Min_damage=1
-Max_damage=4
+Min_damage=2
+Max_damage=6
 Difficulty=9
 Visibility=7
 
@@ -204,7 +212,19 @@ Visibility=7
 Name=Trap
 Position_x=random
 Position_y=random
-Min_damage=1
-Max_damage=4
+Min_damage=3
+Max_damage=9
 Difficulty=10
 Visibility=8
+
+[consumable_1]
+Position_x=random
+Position_y=random
+Type=ARROW
+Visibility=9
+
+[consumable_2]
+Position_x=random
+Position_y=random
+Type=ARROW
+Visibility=10

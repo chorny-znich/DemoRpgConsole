@@ -47,10 +47,10 @@ std::string RangedBattle::shoot()
           if (enemy.getPosition().first + enemy.getPosition().second * static_cast<int>(mapSize.x) ==
             position) {
             currentEnemy = &enemy;
+            resultMessage += std::format("You attack {}", currentEnemy->getName());
             break;
           }
         }
-        resultMessage += std::format("You attack {}", currentEnemy->getName());
         int attackMod{ 0 };
         int damageMod{ 0 };
         size_t rollAttack = dr::EngineUtility::getRandomInRange(GameData::DICE.x, GameData::DICE.y);

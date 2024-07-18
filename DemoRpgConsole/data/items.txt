@@ -7,7 +7,7 @@ Armor_amount=3
 Id=1
 Name=Healing potion
 Type=HEALING_POTION
-Price=50
+Price=60
 
 [weapon_1]
 Id=100
@@ -73,11 +73,11 @@ Price=100
 Id=106
 Name=Old bow
 Damage_min=1
-Damage_max=5
+Damage_max=4
 Type=WEAPON
 Weapon_type=RANGED
 Distance=3
-Price=70
+Price=90
 
 [armor_1]
 Id=500

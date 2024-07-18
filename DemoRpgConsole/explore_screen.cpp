@@ -311,7 +311,7 @@ void ExploreScreen::update()
     
     mConsoleUI.addToHud(UI_Type::PLAYER_INFO, std::string{ std::format("Name: {} lvl:{} exp:{} ${}", mPlayer.getName(), mPlayer.getLevel(),
       mPlayer.getExperience(), mPlayer.getMoney()) }, 0);
-    mConsoleUI.addToHud(UI_Type::PLAYER_INFO, std::string{ std::format("HP:{}/{}", mPlayer.getHealth(), mPlayer.getMaxHealth()) }, 1);
+    mConsoleUI.addToHud(UI_Type::PLAYER_INFO, std::string{ std::format("HP:{}/{} ", mPlayer.getHealth(), mPlayer.getMaxHealth()) }, 1);
     mConsoleUI.addToHud(UI_Type::PLAYER_INFO, std::string{ std::format("Atk:{} Def:{}", 
       mPlayer.getSecondaryStatValue("Attack"), mPlayer.getSecondaryStatValue("Defence"))}, 2);
   }  

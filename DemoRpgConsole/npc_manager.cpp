@@ -17,7 +17,7 @@ void NpcManager::createNpcs(const std::string& filename)
     Npc npc;
     std::string sectionName = "npc_" + std::to_string(i);
     ini::Section section = doc.getSection(sectionName);
-    size_t numberOfItems = std::stoul(section.at("NumberOfItems"));
+    size_t numberOfItems = std::stoul(section.at("number_of_items"));
     npc.spawn({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
     npc.setSymbol(section.at("Symbol")[0]);
     npc.setName(section.at("Name"));

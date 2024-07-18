@@ -2,11 +2,11 @@
 Money_amount=1
 Ladder_amount=1
 Potion_amount=0
-Weapon_amount=2
+Weapon_amount=1
 Armor_amount=0
 Door_amount=0
 Trap_amount=0
-Consumable_amount=1
+Consumable_amount=0
 
 [money_1]
 Position_x=random
@@ -28,17 +28,4 @@ Id=100
 Position_x=random
 Position_y=random
 Type=WEAPON
-Visibility=7
-
-[weapon_2]
-Id=106
-Position_x=2
-Position_y=1
-Type=WEAPON
-Visibility=1
-
-[consumable_1]
-Position_x=random
-Position_y=random
-Type=ARROW
 Visibility=7

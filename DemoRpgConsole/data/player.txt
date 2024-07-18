@@ -1,5 +1,5 @@
 [Player]
-Name=Nika
+Name=Vargar
 Experience=0
 Health=12
 Damage_min=1
@@ -7,21 +7,21 @@ Damage_max=1
 Position_x=1
 Position_y=1
 Symbol=@
-Money=21
+Money=32
 
 [Primary stats]
-Strength=6
+Strength=3
 Stamina=4
 Dexterity=7
-Perception=3
-Intellect=3
-Charisma=7
+Perception=4
+Intellect=8
+Charisma=4
 
 [Secondary stats]
-Attack=3
+Attack=1
 Ranged attack=2
 Defence=10
-Attention=1
+Attention=2
 Reaction=5
 
 [Skills]

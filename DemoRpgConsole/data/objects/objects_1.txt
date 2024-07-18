@@ -6,6 +6,7 @@ Weapon_amount=2
 Armor_amount=0
 Door_amount=3
 Trap_amount=1
+Consumable_amount=0
 
 [money_1]
 Position_x=5
@@ -55,7 +56,7 @@ Type=HEALING_POTION
 Visibility=8
 
 [weapon_1]
-Id=101
+Id=100
 Position_x=14
 Position_y=3
 Type=WEAPON
@@ -96,7 +97,7 @@ Visibility=1
 Name=Trap
 Position_x=random
 Position_y=random
-Min_damage=1
-Max_damage=3
+Min_damage=2
+Max_damage=5
 Difficulty=9
 Visibility=5
