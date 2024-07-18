@@ -10,6 +10,7 @@
 #include "weapon.h"
 #include "armor.h"
 #include "trap.h"
+#include "arrow.h"
 #include "battle.h"
 #include "screen_manager.h" 
 #include "game_state.h"
@@ -108,20 +109,40 @@ void ExploreScreen::inputHandler()
             }
           }
           else if (action == Action::SHOOT_NORTH) {
-            shoot(GameData::Direction::NORTH);
-            std::cout << "Shoot north";
+            if (mEquipment.hasConsumable("arrow") && mEquipment.getConsumable("arrow") > 0) {
+              shoot(GameData::Direction::NORTH);
+              mEquipment.decreaseConsumable("arrow", 1);
+            }
+            else {
+              mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You don't have arrows"), 1);
+            }
           }
           else if (action == Action::SHOOT_EAST) {
-            shoot(GameData::Direction::EAST);
-            std::cout << "Shoot east";
+            if (mEquipment.hasConsumable("arrow") && mEquipment.getConsumable("arrow") > 0) {
+              shoot(GameData::Direction::EAST);
+              mEquipment.decreaseConsumable("arrow", 1);
+            }
+            else {
+              mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You don't have arrows"), 1);
+            }
           }
           else if (action == Action::SHOOT_SOUTH) {
-            shoot(GameData::Direction::SOUTH);
-            std::cout << "Shoot south";
+            if (mEquipment.hasConsumable("arrow") && mEquipment.getConsumable("arrow") > 0) {
+              shoot(GameData::Direction::SOUTH);
+              mEquipment.decreaseConsumable("arrow", 1);
+            }
+            else {
+              mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You don't have arrows"), 1);
+            }
           }
           else if (action == Action::SHOOT_WEST) {
-            shoot(GameData::Direction::WEST);
-            std::cout << "Shoot west";
+            if (mEquipment.hasConsumable("arrow") && mEquipment.getConsumable("arrow") > 0) {
+              shoot(GameData::Direction::WEST);
+              mEquipment.decreaseConsumable("arrow", 1);
+            }
+            else {
+              mConsoleUI.addToHud(UI_Type::GAME_LOG, std::format("You don't have arrows"), 1);
+            }
           }
           mState = GameplayState::PLAYER_ACT;
         }
@@ -392,6 +413,21 @@ void ExploreScreen::pickItem()
       location.setObject(false);
       mObjectManager.destroyObject(currentPlayerLocation);
       location.setSymbol(' ');
+    }
+    else if (pObject->getType() == GameObjectType::CONSUMABLE) {
+      if (pObject->getSubType() == GameObjectSubType::ARROW) {
+        auto pArrowObject = std::static_pointer_cast<Arrow>(pObject);
+        if (mEquipment.hasConsumable("arrow")) {
+          mEquipment.increaseConsumable("arrow", pArrowObject->getAmount());
+        }
+        else {
+          mEquipment.addConsumable("arrow", pArrowObject->getAmount());
+        }
+        mConsoleUI.addToHud(UI_Type::LOCATION_INFO, std::format("You pick up {} arrows", pArrowObject->getAmount()), 1);
+        location.setObject(false);
+        mObjectManager.destroyObject(currentPlayerLocation);
+        location.setSymbol(' ');
+      }
     }
   }
   else {

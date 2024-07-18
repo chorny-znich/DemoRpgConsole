@@ -5,7 +5,7 @@ Ranged weapon appear in the game.
 	+ The player can shoot in 4 directions
 	+ Check if the Hero hit an enemy
 	+ Deal a damage to an enemy when hit him
-	The hero uses supply (arrows) for shooting
+	+ The hero uses supply (arrows) for shooting
 	The hero can find arrows on the level
 + Traps spawn in the game.
 	+ The hero can evade a trap with the Reaction secondary stat

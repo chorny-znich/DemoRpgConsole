@@ -85,6 +85,12 @@
     <Filter Include="Исходные файлы\UI">
       <UniqueIdentifier>{d128d1fe-2ff8-45b5-afe8-d39c777c859c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Object\Consumable">
+      <UniqueIdentifier>{d18ec89a-f93b-4587-93a3-760eb221422d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Object\Consumable">
+      <UniqueIdentifier>{5b37014e-ac43-436f-9837-9ad64a495779}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="location.h">
@@ -225,6 +231,9 @@
     <ClInclude Include="stats.h">
       <Filter>Файлы заголовков\Data</Filter>
     </ClInclude>
+    <ClInclude Include="arrow.h">
+      <Filter>Файлы заголовков\Object\Consumable</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -355,6 +364,9 @@
     </ClCompile>
     <ClCompile Include="current_npc.cpp">
       <Filter>Исходные файлы\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="arrow.cpp">
+      <Filter>Исходные файлы\Object\Consumable</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,8 @@ enum class GameObjectType {
   WEAPON,
   ARMOR,
   DOOR,
-  TRAP
+  TRAP,
+  CONSUMABLE
 };
 
 enum class GameObjectSubType {
@@ -16,5 +17,6 @@ enum class GameObjectSubType {
   SWORD,
   CHEST,
   MELEE,
-  RANGED
+  RANGED,
+  ARROW
 };

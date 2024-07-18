@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="armor.h" />
+    <ClInclude Include="arrow.h" />
     <ClInclude Include="battle.h" />
     <ClInclude Include="battle_action.h" />
     <ClInclude Include="battle_screen.h" />
@@ -68,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="armor.cpp" />
+    <ClCompile Include="arrow.cpp" />
     <ClCompile Include="battle.cpp" />
     <ClCompile Include="battle_action.cpp" />
     <ClCompile Include="battle_screen.cpp" />

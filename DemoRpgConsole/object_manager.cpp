@@ -6,6 +6,7 @@
 #include "armor.h"
 #include "door.h"
 #include "trap.h"
+#include "arrow.h"
 #include "random_placement.h"
 #include "map_symbols.h"
 #include "data.h" 
@@ -28,6 +29,8 @@ void ObjectManager::createObjects(const std::string& filename)
   objects.insert({"armor", std::stoul(section.at("Armor_amount"))});
   objects.insert({ "door", std::stoul(section.at("Door_amount")) });
   objects.insert({ "trap", std::stoul(section.at("Trap_amount")) });
+  objects.insert({ "consumable", std::stoul(section.at("Consumable_amount")) });
+
   // Create money objects
   for (size_t i{1}; i <= objects.at("money"); i++) {
     bool randomPosition = false;
@@ -185,6 +188,27 @@ void ObjectManager::createObjects(const std::string& filename)
     // Push object with the random placement
     if (randomPosition) {
       mRandomObjects.push_back(mObjects.back());
+    }
+  }
+  // Create consumable objects
+  for (size_t i{ 1 }; i <= objects.at("consumable"); i++) {
+    bool randomPosition = false;
+    std::string sectionName = "consumable_" + std::to_string(i);
+    ini::Section section = doc.getSection(sectionName);
+    if (section.at("Type") == "ARROW") {
+      std::shared_ptr<Arrow> pArrow = std::make_shared<Arrow>();
+      if (section.at("Position_x") != "random" && section.at("Position_y") != "random") {
+        pArrow->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+      }
+      else {
+        randomPosition = true;
+      }
+      pArrow->setVisibility(std::stoul(section.at("Visibility")));
+      mObjects.push_back(std::move(pArrow));
+      // Push object with the random placement
+      if (randomPosition) {
+        mRandomObjects.push_back(mObjects.back());
+      }
     }
   }
 }

@@ -31,6 +31,8 @@ public:
   void save();
   std::shared_ptr<GameObject> getEquipObject(const std::string& id);
   void addConsumable(const std::string& id, size_t value);
+  void increaseConsumable(const std::string& id, size_t value);
+  void decreaseConsumable(const std::string& id, size_t value);
   size_t getConsumable(const std::string& id) const;
   bool hasConsumable(const std::string& id) const;
 };

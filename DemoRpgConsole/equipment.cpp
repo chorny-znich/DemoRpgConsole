@@ -63,6 +63,16 @@ void Equipment::addConsumable(const std::string& id, size_t value)
   mConsumable.insert({ id, value });
 }
 
+void Equipment::increaseConsumable(const std::string& id, size_t value)
+{
+  mConsumable[id] += value;
+}
+
+void Equipment::decreaseConsumable(const std::string& id, size_t value)
+{
+  mConsumable[id] -= value;
+}
+
 size_t Equipment::getConsumable(const std::string& id) const
 {
   auto iter = mConsumable.find(id);

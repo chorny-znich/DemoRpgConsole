@@ -19,20 +19,16 @@ std::string RangedBattle::shoot()
   std::string resultMessage = "You missed a target";
 
   if (mDirection == GameData::Direction::NORTH) {
-    //std::cout << "You are shooting North ";
     direction = { 0, -1 };
   }
   else if (mDirection == GameData::Direction::EAST) {
-    //std::cout << "You are shooting East ";
     direction = { 1, 0 };
   }
   else if (mDirection == GameData::Direction::SOUTH) {
-    //std::cout << "You are shooting South ";
     direction = { 0, 1 };
   }
   else if (mDirection == GameData::Direction::WEST) {
-      //std::cout << "You are shooting West ";
-      direction = { -1, 0 };
+    direction = { -1, 0 };
   }
 
   std::shared_ptr<Weapon> pRangedWeapon = std::static_pointer_cast<Weapon>(CurrentMapData::getEquipment().getEquipObject("Ranged weapon"));
