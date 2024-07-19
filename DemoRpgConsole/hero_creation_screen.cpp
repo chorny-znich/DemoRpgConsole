@@ -36,8 +36,9 @@ void HeroCreationScreen::calcSecondaryStats()
   mPlayer.setSecondaryStatValue("Ranged attack", std::floor((mPlayer.getPrimaryStatValue("Dexterity") +
     mPlayer.getPrimaryStatValue("Perception")) * RANGED_ATTACK_MODIFIER));
   mPlayer.setSecondaryStatValue("Defence", std::floor(mPlayer.getPrimaryStatValue("Dexterity") * DEFENCE_MODIFIER));
-  mPlayer.setSecondaryStatValue("Reaction", std::floor((mPlayer.getPrimaryStatValue("Dexterity") +
-    mPlayer.getPrimaryStatValue("Perception")) * REACTION_MODIFIER));
+  mPlayer.setSecondaryStatValue("Reaction", std::floor((mPlayer.getPrimaryStatValue("Dexterity") * 
+    REACTION_MODIFIER_DEXTERITY + mPlayer.getPrimaryStatValue("Perception") * REACTION_MODIFIER_PERCEPTION) * 
+    REACTION_MODIFIER));
   mPlayer.updateAttention();
 }
 

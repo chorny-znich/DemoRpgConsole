@@ -14,6 +14,8 @@ const float RANGED_ATTACK_MODIFIER = 0.25;
 const float DEFENCE_MODIFIER = 1.5;
 const float ATTENTION_MODIFIER = 0.5;
 const float REACTION_MODIFIER = 0.5;
+const float REACTION_MODIFIER_DEXTERITY = 0.75;
+const float REACTION_MODIFIER_PERCEPTION = 0.25;
 
 class RPStats
 {

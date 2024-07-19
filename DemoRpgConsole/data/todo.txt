@@ -37,6 +37,12 @@ Skill
 	Commerce - improve you Trade on 5%
 Merchant
 	Sells consumable items
+Trap
+	Reconsider traps mechanic
+	When you trying to disarm a trap the following options are possible:
+		nothing happens;
+		the trap is activating and deal you a damage;
+		you can't try to disarm a trap anymore;
 
 Version 0.4.0
 -------------
