@@ -43,7 +43,6 @@ void ConsoleUI::display(UI_Type type)
   for (const auto& str : arrayToPrint) {
     std::cout << str << '\n';
   }
-  //std::cout << '\n';
 }
 
 void ConsoleUI::displayCommandString()
