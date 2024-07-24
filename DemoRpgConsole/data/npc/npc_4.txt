@@ -2,15 +2,16 @@
 Npc_amount=1
 
 [npc_1]
-Name=Trader 2
-Position_x=3
-Position_y=9
+Name=Old merchant
+Position_x=11
+Position_y=7
 Symbol=T
-NumberOfItems=7
+number_of_items=8
 Item_1=1
 Item_2=1
 Item_3=101
 Item_4=102
 Item_5=103
-Item_6=500
-Item_7=501
+Item_6=106
+Item_7=500
+Item_8=501
