@@ -48,7 +48,8 @@ std::vector<Enemy>& EnemyManager::getEnemies()
 Enemy& EnemyManager::getEnemy(GameData::Position pos)
 {
   for (auto& enemy : mEnemies) {
-    if (pos.first == enemy.getPosition().first && pos.second == enemy.getPosition().second) {
+    if ((pos.first == enemy.getPosition().first && pos.second == enemy.getPosition().second) && 
+      enemy.isActive()) {
       return enemy;
     }
   }

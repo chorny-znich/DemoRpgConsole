@@ -1,0 +1,9 @@
+[general]
+Money_amount=0
+Ladder_amount=0
+Potion_amount=0
+Weapon_amount=0
+Armor_amount=0
+Door_amount=0
+Trap_amount=0
+Consumable_amount=0

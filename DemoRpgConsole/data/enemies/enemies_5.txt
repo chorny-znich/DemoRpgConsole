@@ -2,17 +2,17 @@
 Enemies_amount=17
 
 [enemy_1]
-Id=7
+Id=5
 Position_x=31
 Position_y=13
 
 [enemy_2]
-Id=5
+Id=3
 Position_x=28
 Position_y=12
 
 [enemy_3]
-Id=6
+Id=4
 Position_x=20
 Position_y=10
 
@@ -22,7 +22,7 @@ Position_x=3
 Position_y=11
 
 [enemy_5]
-Id=7
+Id=4
 Position_x=33
 Position_y=8
 
@@ -32,7 +32,7 @@ Position_x=11
 Position_y=7
 
 [enemy_7]
-Id=6
+Id=3
 Position_x=27
 Position_y=7
 
@@ -47,7 +47,7 @@ Position_x=26
 Position_y=5
 
 [enemy_10]
-Id=6
+Id=4
 Position_x=3
 Position_y=4
 
@@ -72,7 +72,7 @@ Position_x=26
 Position_y=3
 
 [enemy_15]
-Id=4
+Id=3
 Position_x=4
 Position_y=2
 

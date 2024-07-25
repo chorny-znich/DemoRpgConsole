@@ -1,0 +1,19 @@
+[general]
+Npc_amount=1
+
+[npc_1]
+Name=Old merchant
+Position_x=18
+Position_y=3
+Symbol=T
+number_of_items=10
+Item_1=1
+Item_2=1
+Item_3=102
+Item_4=103
+Item_5=104
+Item_6=105
+Item_7=106
+Item_8=500
+Item_9=501
+Item_10=502

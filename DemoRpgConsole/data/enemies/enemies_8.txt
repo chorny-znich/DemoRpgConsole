@@ -1,0 +1,2 @@
+[general]
+Enemies_amount=0

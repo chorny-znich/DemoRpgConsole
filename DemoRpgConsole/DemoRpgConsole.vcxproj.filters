@@ -457,5 +457,41 @@
     <Text Include="data\bugs.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
+    <Text Include="data\maps\map_7.txt">
+      <Filter>Файлы ресурсов\Map</Filter>
+    </Text>
+    <Text Include="data\maps\map_8.txt">
+      <Filter>Файлы ресурсов\Map</Filter>
+    </Text>
+    <Text Include="data\enemies\enemies_8.txt">
+      <Filter>Файлы ресурсов\Enemy</Filter>
+    </Text>
+    <Text Include="data\enemies\enemies_6.txt">
+      <Filter>Файлы ресурсов\Enemy</Filter>
+    </Text>
+    <Text Include="data\enemies\enemies_7.txt">
+      <Filter>Файлы ресурсов\Enemy</Filter>
+    </Text>
+    <Text Include="data\npc\npc_5.txt">
+      <Filter>Файлы ресурсов\Npc</Filter>
+    </Text>
+    <Text Include="data\npc\npc_6.txt">
+      <Filter>Файлы ресурсов\Npc</Filter>
+    </Text>
+    <Text Include="data\npc\npc_7.txt">
+      <Filter>Файлы ресурсов\Npc</Filter>
+    </Text>
+    <Text Include="data\npc\npc_8.txt">
+      <Filter>Файлы ресурсов\Npc</Filter>
+    </Text>
+    <Text Include="data\objects\objects_8.txt">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </Text>
+    <Text Include="data\objects\objects_6.txt">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </Text>
+    <Text Include="data\objects\objects_7.txt">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </Text>
   </ItemGroup>
 </Project>

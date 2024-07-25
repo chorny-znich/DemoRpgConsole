@@ -87,6 +87,7 @@ size_t Enemy::getSight() const
 void Enemy::isDead()
 {
   mDead = true;
+  setActiveStatus(false);
 }
 
 void Enemy::setBattleStatus(bool status)

@@ -8,41 +8,40 @@ Door_amount=4
 Trap_amount=3
 Consumable_amount=2
 
-
 [money_1]
 Position_x=random
 Position_y=random
-Visibility=4
+Visibility=8
 
 [money_2]
 Position_x=random
 Position_y=random
-Visibility=4
+Visibility=9
 
 [money_3]
 Position_x=random
 Position_y=random
-Visibility=4
+Visibility=9
 
 [money_4]
 Position_x=random
 Position_y=random
-Visibility=4
+Visibility=9
 
 [money_5]
 Position_x=random
 Position_y=random
-Visibility=4
+Visibility=8
 
 [money_6]
 Position_x=random
 Position_y=random
-Visibility=4
+Visibility=10
 
 [money_7]
 Position_x=random
 Position_y=random
-Visibility=4
+Visibility=9
 
 [ladder_1]
 Name=Ladder
@@ -50,8 +49,8 @@ Position_x=33
 Position_y=13
 Direction_to=DOWN
 Map_index_to=6
-Player_position_x=0
-Player_position_y=0
+Player_position_x=1
+Player_position_y=4
 Visibility=1
 
 [ladder_2]
@@ -69,14 +68,14 @@ Id=1
 Position_x=random
 Position_y=random
 Type=HEALING_POTION
-Visibility=5
+Visibility=10
 
 [potion_2]
 Id=1
 Position_x=random
 Position_y=random
 Type=HEALING_POTION
-Visibility=5
+Visibility=11
 
 [weapon_1]
 Id=103
@@ -118,7 +117,7 @@ Id=502
 Position_x=random
 Position_y=random
 Type=ARMOR
-Visibility=11
+Visibility=12
 
 [door_1]
 Name=Door

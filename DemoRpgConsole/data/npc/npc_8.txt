@@ -1,0 +1,2 @@
+[general]
+Npc_amount=0

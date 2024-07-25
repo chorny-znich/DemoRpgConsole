@@ -64,8 +64,8 @@ Position_x=1
 Position_y=3
 Direction_to=DOWN
 Map_index_to=4
-Player_position_x=28
-Player_position_y=14
+Player_position_x=18
+Player_position_y=10
 Visibility=1
 
 [ladder_3]

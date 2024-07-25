@@ -1,12 +1,13 @@
 [general]
 Money_amount=8
 Ladder_amount=2
-Potion_amount=1
-Weapon_amount=3
-Armor_amount=1
+Potion_amount=2
+Weapon_amount=4
+Armor_amount=2
 Door_amount=7
-Trap_amount=3
+Trap_amount=4
 Consumable_amount=2
+
 
 [money_1]
 Position_x=random
@@ -21,12 +22,12 @@ Visibility=9
 [money_3]
 Position_x=random
 Position_y=random
-Visibility=8
+Visibility=9
 
 [money_4]
 Position_x=random
 Position_y=random
-Visibility=8
+Visibility=10
 
 [money_5]
 Position_x=random
@@ -36,36 +37,36 @@ Visibility=9
 [money_6]
 Position_x=random
 Position_y=random
-Visibility=8
+Visibility=9
 
 [money_7]
 Position_x=random
 Position_y=random
-Visibility=9
+Visibility=10
 
 [money_8]
 Position_x=random
 Position_y=random
-Visibility=9
+Visibility=8
 
 [ladder_1]
 Name=Ladder
-Position_x=2
-Position_y=13
+Position_x=30
+Position_y=14
 Direction_to=DOWN
-Map_index_to=6
-Player_position_x=1
-Player_position_y=13
+Map_index_to=8
+Player_position_x=16
+Player_position_y=1
 Visibility=1
 
 [ladder_2]
 Name=Ladder
-Position_x=3
-Position_y=1
+Position_x=1
+Position_y=13
 Direction_to=UP
-Map_index_to=2
-Player_position_x=1
-Player_position_y=3
+Map_index_to=4
+Player_position_x=2
+Player_position_y=13
 Visibility=1
 
 [potion_1]
@@ -75,21 +76,35 @@ Position_y=random
 Type=HEALING_POTION
 Visibility=10
 
+[potion_2]
+Id=1
+Position_x=random
+Position_y=random
+Type=HEALING_POTION
+Visibility=11
+
 [weapon_1]
-Id=102
+Id=103
+Position_x=random
+Position_y=random
+Type=WEAPON
+Visibility=8
+
+[weapon_2]
+Id=104
 Position_x=random
 Position_y=random
 Type=WEAPON
 Visibility=9
 
-[weapon_2]
-Id=103
+[weapon_3]
+Id=105
 Position_x=random
 Position_y=random
 Type=WEAPON
-Visibility=10
+Visibility=11
 
-[weapon_3]
+[weapon_4]
 Id=106
 Position_x=random
 Position_y=random
@@ -103,39 +118,30 @@ Position_y=random
 Type=ARMOR
 Visibility=10
 
+[armor_2]
+Id=502
+Position_x=random
+Position_y=random
+Type=ARMOR
+Visibility=12
+
 [door_1]
 Name=Door
-Position_x=2
-Position_y=9
+Position_x=15
+Position_y=4
 Status=Locked
 Type=DOOR
 Visibility=1
 
 [door_2]
 Name=Door
-Position_x=13
-Position_y=11
+Position_x=2
+Position_y=6
 Status=Locked
 Type=DOOR
 Visibility=1
 
 [door_3]
-Name=Door
-Position_x=21
-Position_y=13
-Status=Locked
-Type=DOOR
-Visibility=1
-
-[door_4]
-Name=Door
-Position_x=28
-Position_y=9
-Status=Locked
-Type=DOOR
-Visibility=1
-
-[door_5]
 Name=Door
 Position_x=25
 Position_y=6
@@ -143,18 +149,34 @@ Status=Locked
 Type=DOOR
 Visibility=1
 
+[door_4]
+Name=Door
+Position_x=8
+Position_y=10
+Status=Locked
+Type=DOOR
+Visibility=1
+
+[door_5]
+Name=Door
+Position_x=24
+Position_y=11
+Status=Locked
+Type=DOOR
+Visibility=1
+
 [door_6]
 Name=Door
-Position_x=21
-Position_y=5
+Position_x=8
+Position_y=13
 Status=Locked
 Type=DOOR
 Visibility=1
 
 [door_7]
 Name=Door
-Position_x=18
-Position_y=2
+Position_x=13
+Position_y=15
 Status=Locked
 Type=DOOR
 Visibility=1
@@ -163,7 +185,7 @@ Visibility=1
 Name=Trap
 Position_x=random
 Position_y=random
-Min_damage=3
+Min_damage=2
 Max_damage=6
 Difficulty=10
 Visibility=9
@@ -184,7 +206,16 @@ Position_y=random
 Min_damage=3
 Max_damage=6
 Difficulty=10
-Visibility=8
+Visibility=9
+
+[trap_4]
+Name=Trap
+Position_x=random
+Position_y=random
+Min_damage=3
+Max_damage=9
+Difficulty=11
+Visibility=10
 
 [consumable_1]
 Position_x=random

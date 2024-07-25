@@ -121,6 +121,9 @@
     <Text Include="data\enemies\enemies_3.txt" />
     <Text Include="data\enemies\enemies_4.txt" />
     <Text Include="data\enemies\enemies_5.txt" />
+    <Text Include="data\enemies\enemies_6.txt" />
+    <Text Include="data\enemies\enemies_7.txt" />
+    <Text Include="data\enemies\enemies_8.txt" />
     <Text Include="data\enemy_list.txt" />
     <Text Include="data\items.txt" />
     <Text Include="data\maps\map_0.txt" />
@@ -130,17 +133,26 @@
     <Text Include="data\maps\map_4.txt" />
     <Text Include="data\maps\map_5.txt" />
     <Text Include="data\maps\map_6.txt" />
+    <Text Include="data\maps\map_7.txt" />
+    <Text Include="data\maps\map_8.txt" />
     <Text Include="data\npc\npc_0.txt" />
     <Text Include="data\npc\npc_1.txt" />
     <Text Include="data\npc\npc_2.txt" />
     <Text Include="data\npc\npc_3.txt" />
     <Text Include="data\npc\npc_4.txt" />
+    <Text Include="data\npc\npc_5.txt" />
+    <Text Include="data\npc\npc_6.txt" />
+    <Text Include="data\npc\npc_7.txt" />
+    <Text Include="data\npc\npc_8.txt" />
     <Text Include="data\objects\objects_0.txt" />
     <Text Include="data\objects\objects_1.txt" />
     <Text Include="data\objects\objects_2.txt" />
     <Text Include="data\objects\objects_3.txt" />
     <Text Include="data\objects\objects_4.txt" />
     <Text Include="data\objects\objects_5.txt" />
+    <Text Include="data\objects\objects_6.txt" />
+    <Text Include="data\objects\objects_7.txt" />
+    <Text Include="data\objects\objects_8.txt" />
     <Text Include="data\player.txt" />
     <Text Include="data\todo.txt" />
   </ItemGroup>
