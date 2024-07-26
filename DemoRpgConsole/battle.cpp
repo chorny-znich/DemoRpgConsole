@@ -58,14 +58,8 @@ std::string Battle::enemyAttack()
 
   if (mEnemy.getSecondaryStatValue("Attack") + rollAttack >= mPlayer.getSecondaryStatValue("Defence")) {
     size_t damage = mEnemy.getDamageValue();
-    size_t damageToPlayer = damage - mPlayer.getArmor();
-
-    if (damageToPlayer > 0) {
-      mPlayer.decreaseHealth(damageToPlayer);
-    }
-    else {
-      damageToPlayer = 0;
-    }
+    size_t damageToPlayer = (damage > mPlayer.getArmor()) ? damage - mPlayer.getArmor() : 0;
+    mPlayer.decreaseHealth(damageToPlayer);
 
     if (mPlayer.getHealth() <= 0) {
       str += std::format("You took {} points of damage. You killed by {}", damageToPlayer, mEnemy.getName());
