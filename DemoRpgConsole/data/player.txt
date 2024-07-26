@@ -1,28 +1,28 @@
 [Player]
-Name=Nika
+Name=Dima
 Experience=0
-Health=24
+Health=12
 Damage_min=1
 Damage_max=1
 Position_x=1
 Position_y=1
 Symbol=@
-Money=12
+Money=40
 
 [Primary stats]
-Strength=8
-Stamina=8
-Dexterity=4
-Perception=2
-Intellect=2
-Charisma=6
+Strength=3
+Stamina=4
+Dexterity=7
+Perception=3
+Intellect=8
+Charisma=5
 
 [Secondary stats]
-Attack=4
-Ranged attack=1
-Defence=6
+Attack=1
+Ranged attack=2
+Defence=10
 Attention=1
-Reaction=1
+Reaction=3
 
 [Skills]
 Search=0
