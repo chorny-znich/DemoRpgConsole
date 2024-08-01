@@ -1,5 +1,5 @@
 [Player]
-Name=Dima
+Name=Vargar
 Experience=0
 Health=12
 Damage_min=1

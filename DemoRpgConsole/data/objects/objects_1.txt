@@ -67,7 +67,7 @@ Id=101
 Position_x=random
 Position_y=random
 Type=WEAPON
-Visibility=8
+Visibility=9
 
 [door_1]
 Name=Door
@@ -100,4 +100,4 @@ Position_y=random
 Min_damage=2
 Max_damage=5
 Difficulty=9
-Visibility=5
+Visibility=6

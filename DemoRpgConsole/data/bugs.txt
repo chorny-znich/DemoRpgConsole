@@ -2,6 +2,7 @@
 ? When the player takes damage from the trap he don't die even if his Health less or equal zero
 The game is crushing when the  player use '1' key when it is no trap to disarm
 x When you choose your action in battle, the key numbers before actions don't appear
-Missing a name of a pack if arrows when you see them in your location
+? Missing a name of a pack if arrows when you see them in your location
 Doubled strings in a shop, after you bought an item from the merchant
 ? The game ends when the hero still has more than 0 hp
+Enemies can walk through each other
