@@ -73,11 +73,11 @@ Price=100
 Id=106
 Name=Old bow
 Damage_min=1
-Damage_max=4
+Damage_max=5
 Type=WEAPON
 Weapon_type=RANGED
-Distance=3
-Price=90
+Distance=4
+Price=100
 
 [armor_1]
 Id=500

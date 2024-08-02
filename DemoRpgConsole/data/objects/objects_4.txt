@@ -87,7 +87,7 @@ Id=103
 Position_x=random
 Position_y=random
 Type=WEAPON
-Visibility=10
+Visibility=11
 
 [weapon_3]
 Id=106
@@ -97,7 +97,7 @@ Type=WEAPON
 Visibility=10
 
 [armor_1]
-Id=501
+Id=500
 Position_x=random
 Position_y=random
 Type=ARMOR

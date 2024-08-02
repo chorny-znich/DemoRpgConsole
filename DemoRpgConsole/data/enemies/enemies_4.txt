@@ -27,11 +27,11 @@ Position_x=25
 Position_y=8
 
 [enemy_6]
-Id=5
+Id=3
 Position_x=28
 Position_y=12
 
 [enemy_7]
-Id=5
+Id=4
 Position_x=5
 Position_y=11

@@ -97,7 +97,7 @@ Id=101
 Position_x=5
 Position_y=6
 Type=WEAPON
-Visibility=7
+Visibility=8
 
 [weapon_2]
 Id=102

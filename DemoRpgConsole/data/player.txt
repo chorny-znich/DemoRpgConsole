@@ -1,28 +1,28 @@
 [Player]
-Name=Vargar
+Name=Ann
 Experience=0
-Health=12
+Health=9
 Damage_min=1
 Damage_max=1
 Position_x=1
 Position_y=1
 Symbol=@
-Money=40
+Money=14
 
 [Primary stats]
-Strength=3
-Stamina=4
-Dexterity=7
-Perception=3
-Intellect=8
-Charisma=5
+Strength=1
+Stamina=3
+Dexterity=9
+Perception=8
+Intellect=7
+Charisma=2
 
 [Secondary stats]
-Attack=1
-Ranged attack=2
-Defence=10
-Attention=1
-Reaction=3
+Attack=0
+Ranged attack=4
+Defence=13
+Attention=4
+Reaction=4
 
 [Skills]
 Search=0
