@@ -48,7 +48,7 @@ Name=Ladder
 Position_x=33
 Position_y=13
 Direction_to=DOWN
-Map_index_to=6
+Map_index_to=7
 Player_position_x=1
 Player_position_y=4
 Visibility=1
@@ -103,7 +103,7 @@ Id=106
 Position_x=random
 Position_y=random
 Type=WEAPON
-Visibility=10
+Visibility=9
 
 [armor_1]
 Id=501
