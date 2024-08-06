@@ -8,7 +8,6 @@ Door_amount=7
 Trap_amount=4
 Consumable_amount=2
 
-
 [money_1]
 Position_x=random
 Position_y=random
@@ -47,7 +46,7 @@ Visibility=10
 [money_8]
 Position_x=random
 Position_y=random
-Visibility=8
+Visibility=9
 
 [ladder_1]
 Name=Ladder
@@ -88,21 +87,21 @@ Id=103
 Position_x=random
 Position_y=random
 Type=WEAPON
-Visibility=8
+Visibility=9
 
 [weapon_2]
 Id=104
 Position_x=random
 Position_y=random
 Type=WEAPON
-Visibility=9
+Visibility=11
 
 [weapon_3]
 Id=105
 Position_x=random
 Position_y=random
 Type=WEAPON
-Visibility=11
+Visibility=13
 
 [weapon_4]
 Id=106

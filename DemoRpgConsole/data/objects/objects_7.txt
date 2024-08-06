@@ -28,6 +28,11 @@ Position_x=random
 Position_y=random
 Visibility=9
 
+[money_5]
+Position_x=random
+Position_y=random
+Visibility=10
+
 [ladder_1]
 Name=Ladder
 Position_x=23

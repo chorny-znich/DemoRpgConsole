@@ -50,6 +50,8 @@ Loot
 	Chest with loot spawns on the level
 Battle
 	The dice's roll 12 is a critical strike which always hits and deals more damage
+Hero
+	The hero has a line of sight
 	
 Version 0.5.0
 -------------
