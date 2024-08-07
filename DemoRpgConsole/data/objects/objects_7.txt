@@ -79,7 +79,7 @@ Id=502
 Position_x=random
 Position_y=random
 Type=ARMOR
-Visibility=12
+Visibility=11
 
 [door_1]
 Name=Door

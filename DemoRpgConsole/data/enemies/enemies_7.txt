@@ -7,12 +7,12 @@ Position_x=2
 Position_y=1
 
 [enemy_2]
-Id=3
+Id=5
 Position_x=10
 Position_y=1
 
 [enemy_3]
-Id=4
+Id=6
 Position_x=16
 Position_y=1
 
@@ -27,7 +27,7 @@ Position_x=8
 Position_y=7
 
 [enemy_6]
-Id=5
+Id=7
 Position_x=12
 Position_y=6
 

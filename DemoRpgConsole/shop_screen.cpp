@@ -97,6 +97,7 @@ void ShopScreen::update()
 void ShopScreen::render()
 {
   if (mRenderScreen) {
+    system("cls");
     if (mState == States::SHOW_SHOP_MENU) {
       showShopMenu();
     }
