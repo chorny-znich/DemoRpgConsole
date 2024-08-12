@@ -15,6 +15,10 @@
 #include <stdexcept>
 #include <DisRealityGF.h>
 
+/**
+ * @brief create all game's objects from the specific file
+ * @param filename 
+*/
 void ObjectManager::createObjects(const std::string& filename)
 {
   mObjects.clear();
@@ -156,13 +160,21 @@ void ObjectManager::createObjects(const std::string& filename)
       std::shared_ptr<Door> pDoor = std::make_shared<Door>();
       pDoor->setName(section.at("Name"));
       pDoor->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
-      if (section.at("Status") == "Locked") {
+      if (section.at("Status") == "Hidden") {
+        pDoor->setSymbol(MapSymbols::DOOR_HIDDEN);
+        pDoor->setStatus(DoorStatus::HIDDEN);
+      }
+      else if (section.at("Status") == "Locked") {
         pDoor->setSymbol(MapSymbols::DOOR_LOCKED);
         pDoor->setStatus(DoorStatus::LOCKED);
       }
+      else if (section.at("Status") == "Closed") {
+        pDoor->setSymbol(MapSymbols::DOOR_CLOSED);
+        pDoor->setStatus(DoorStatus::CLOSED);
+      }
       else {
-        pDoor->setSymbol(MapSymbols::DOOR_UNLOCKED);
-        pDoor->setStatus(DoorStatus::UNLOCKED);
+        pDoor->setSymbol(MapSymbols::DOOR_OPEN);
+        pDoor->setStatus(DoorStatus::OPEN);
       }
       pDoor->setVisibility(std::stoul(section.at("Visibility")));
       mObjects.push_back(std::move(pDoor));

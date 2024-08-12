@@ -499,12 +499,12 @@ void ExploreScreen::useDoor(std::shared_ptr<GameObject> pObject)
 {
   auto pDoor = std::static_pointer_cast<Door>(pObject);
   Location& location = mCurrentMap.getCurrentLocation(pDoor->getPosition());
-  if (pDoor->getStatus() == DoorStatus::LOCKED) {
-    pDoor->setStatus(DoorStatus::UNLOCKED);
+  if (pDoor->getStatus() == DoorStatus::CLOSED) {
+    pDoor->setStatus(DoorStatus::OPEN);
     location.setBarrier(false);
   }
   else {
-    pDoor->setStatus(DoorStatus::LOCKED);
+    pDoor->setStatus(DoorStatus::CLOSED);
     location.setBarrier(true);
   }
 }
@@ -669,6 +669,12 @@ void ExploreScreen::checkHeroEnvironment(GameData::Position pos)
       auto pObject = mObjectManager.getObject(locPosition);
       if (!pObject->isVisible() && checkVisibility(pObject->getVisibility())) {
         pObject->setVisibleStatus(true);
+      }
+      if (pObject->getType() == GameObjectType::DOOR && pObject->isVisible()) {
+        auto pDoorObject = std::static_pointer_cast<Door>(pObject);
+        if (pDoorObject->getStatus() == DoorStatus::HIDDEN) {
+          pDoorObject->setStatus(DoorStatus::CLOSED);
+        }
       }
       if (pObject->isVisible() && pObject->getType() == GameObjectType::TRAP) {
         size_t currentCommandNumber = mConsoleUI.getCurrentCommandNumber() + 1;

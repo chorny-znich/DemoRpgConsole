@@ -52,6 +52,8 @@ Battle
 	The dice's roll 12 is a critical strike which always hits and deals more damage
 Hero
 	The hero has a line of sight
+Mechanics
+	Open a locked door using 'Deft hands' skill and consumable item - lockpick 
 	
 Version 0.5.0
 -------------

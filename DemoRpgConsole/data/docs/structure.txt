@@ -1,0 +1,1 @@
+The door object creating in the Object manager in the CreateObject method

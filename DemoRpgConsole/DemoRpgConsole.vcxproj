@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="data\bugs.txt" />
+    <Text Include="data\docs\structure.txt" />
     <Text Include="data\enemies\enemies_0.txt" />
     <Text Include="data\enemies\enemies_1.txt" />
     <Text Include="data\enemies\enemies_2.txt" />

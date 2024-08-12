@@ -9,11 +9,11 @@ Door::Door() :
 void Door::setStatus(DoorStatus status)
 {
   mStatus = status;
-  if (mStatus == DoorStatus::LOCKED) {
-    setSymbol(MapSymbols::DOOR_LOCKED);
+  if (mStatus == DoorStatus::CLOSED) {
+    setSymbol(MapSymbols::DOOR_CLOSED);
   }
   else {
-    setSymbol(MapSymbols::DOOR_UNLOCKED);
+    setSymbol(MapSymbols::DOOR_OPEN);
   }
 }
 

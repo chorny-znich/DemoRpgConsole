@@ -91,6 +91,9 @@
     <Filter Include="Исходные файлы\Object\Consumable">
       <UniqueIdentifier>{5b37014e-ac43-436f-9837-9ad64a495779}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\Doc">
+      <UniqueIdentifier>{6bc887f5-3fa7-4675-b20f-58feaf5ffbbc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="location.h">
@@ -492,6 +495,9 @@
     </Text>
     <Text Include="data\objects\objects_7.txt">
       <Filter>Файлы ресурсов\Object</Filter>
+    </Text>
+    <Text Include="data\docs\structure.txt">
+      <Filter>Файлы ресурсов\Doc</Filter>
     </Text>
   </ItemGroup>
 </Project>

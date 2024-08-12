@@ -3,14 +3,16 @@
 #include "game_object.h"
 
 enum class DoorStatus {
+  OPEN,
+  CLOSED,
   LOCKED,
-  UNLOCKED
+  HIDDEN
 };
 
 class Door : public GameObject
 {
 private:
-  DoorStatus mStatus{ DoorStatus::LOCKED };
+  DoorStatus mStatus{ DoorStatus::CLOSED };
 
 public:
   Door();

@@ -4,7 +4,7 @@ Ladder_amount=1
 Potion_amount=0
 Weapon_amount=1
 Armor_amount=0
-Door_amount=0
+Door_amount=1
 Trap_amount=0
 Consumable_amount=0
 
@@ -29,3 +29,11 @@ Position_x=random
 Position_y=random
 Type=WEAPON
 Visibility=7
+
+[door_1]
+Name=Door
+Position_x=4
+Position_y=1
+Status=Hidden
+Type=DOOR
+Visibility=1
