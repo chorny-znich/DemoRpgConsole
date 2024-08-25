@@ -43,6 +43,9 @@ Trap
 		nothing happens;
 		the trap is activating and deal you a damage;
 		you can't try to disarm a trap anymore;
+Equipment
+	Equipment has a status which can be INVENTORY HERO
+	The player can't sell equipped equipment
 
 Version 0.4.0
 -------------
@@ -54,7 +57,8 @@ Hero
 	The hero has a line of sight
 Mechanics
 	Open a locked door using 'Deft hands' skill and consumable item - lockpick 
-	
+The player can save the game at any moment.
+
 Version 0.5.0
 -------------
 Loot

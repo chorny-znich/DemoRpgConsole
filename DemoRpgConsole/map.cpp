@@ -86,7 +86,7 @@ void Map::setObjects(const std::vector<std::shared_ptr<GameObject>>& objects)
       mLocationMap[object->getPosition().second * mMapSize.x + object->getPosition().first].setObject(true);
     }
     else {
-      if (object->getType() == GameObjectType::TRAP) {
+      if (object->getType() == GameObjectType::TRAP || object->getType() == GameObjectType::DOOR) {
         mLocationMap[object->getPosition().second * mMapSize.x + object->getPosition().first].setObject(true);
       }
     }

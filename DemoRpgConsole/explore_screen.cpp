@@ -15,6 +15,7 @@
 #include "screen_manager.h" 
 #include "game_state.h"
 #include "ranged_battle.h"
+#include "map_symbols.h"
 
 #include <DisRealityGF.h>
 
@@ -616,7 +617,7 @@ void ExploreScreen::changeMap()
   mPlayer.spawn(mLevel.getPlayerSpawnPosition());
   checkHeroEnvironment(mPlayer.getPosition());
   mState = GameplayState::START;
-  // Share map's data with the CurrentMapData clas
+  // Share map's data with the CurrentMapData class
 
   mCurrentMapData.changeMap(&(mEnemyManager.getEnemies()), &(mCurrentMap.getMap()), mCurrentMap.getMapSize());
 }
@@ -674,14 +675,14 @@ void ExploreScreen::checkHeroEnvironment(GameData::Position pos)
         auto pDoorObject = std::static_pointer_cast<Door>(pObject);
         if (pDoorObject->getStatus() == DoorStatus::HIDDEN) {
           pDoorObject->setStatus(DoorStatus::CLOSED);
+          pDoorObject->setSymbol(MapSymbols::DOOR_CLOSED);
         }
       }
       if (pObject->isVisible() && pObject->getType() == GameObjectType::TRAP) {
         size_t currentCommandNumber = mConsoleUI.getCurrentCommandNumber() + 1;
         mHeroAction[currentCommandNumber] = {item.first, Action::DISARM_TRAP};
         mConsoleUI.addCommand(std::format("{}. {}", currentCommandNumber, mActionList[Action::DISARM_TRAP]));
-      }
-      
+      } 
     }
   }
   mConsoleUI.addCommand(std::format("{}. {}", mConsoleUI.getCurrentCommandNumber() + 1, 

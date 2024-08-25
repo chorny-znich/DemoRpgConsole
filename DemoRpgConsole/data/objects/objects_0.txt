@@ -2,7 +2,7 @@
 Money_amount=1
 Ladder_amount=1
 Potion_amount=0
-Weapon_amount=1
+Weapon_amount=2
 Armor_amount=0
 Door_amount=1
 Trap_amount=0
@@ -30,10 +30,17 @@ Position_y=random
 Type=WEAPON
 Visibility=7
 
+[weapon_2]
+Id=100
+Position_x=5
+Position_y=1
+Type=WEAPON
+Visibility=5
+
 [door_1]
 Name=Door
 Position_x=4
 Position_y=1
 Status=Hidden
 Type=DOOR
-Visibility=1
+Visibility=8
