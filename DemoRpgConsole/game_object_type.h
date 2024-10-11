@@ -18,5 +18,6 @@ enum class GameObjectSubType {
   CHEST,
   MELEE,
   RANGED,
-  ARROW
+  ARROW,
+  INGRIDIENT
 };

@@ -40,6 +40,7 @@
     <ClInclude Include="game_object_type.h" />
     <ClInclude Include="game_state.h" />
     <ClInclude Include="hero_creation_screen.h" />
+    <ClInclude Include="ingridient.h" />
     <ClInclude Include="inventory.h" />
     <ClInclude Include="inventory_screen.h" />
     <ClInclude Include="ladder.h" />
@@ -87,6 +88,7 @@
     <ClCompile Include="game_object.cpp" />
     <ClCompile Include="game_state.cpp" />
     <ClCompile Include="hero_creation_screen.cpp" />
+    <ClCompile Include="ingridient.cpp" />
     <ClCompile Include="inventory.cpp" />
     <ClCompile Include="inventory_screen.cpp" />
     <ClCompile Include="ladder.cpp" />

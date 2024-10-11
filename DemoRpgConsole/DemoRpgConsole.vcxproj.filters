@@ -237,6 +237,9 @@
     <ClInclude Include="arrow.h">
       <Filter>Файлы заголовков\Object\Consumable</Filter>
     </ClInclude>
+    <ClInclude Include="ingridient.h">
+      <Filter>Файлы заголовков\Object\Consumable</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -369,6 +372,9 @@
       <Filter>Исходные файлы\Entity</Filter>
     </ClCompile>
     <ClCompile Include="arrow.cpp">
+      <Filter>Исходные файлы\Object\Consumable</Filter>
+    </ClCompile>
+    <ClCompile Include="ingridient.cpp">
       <Filter>Исходные файлы\Object\Consumable</Filter>
     </ClCompile>
   </ItemGroup>
