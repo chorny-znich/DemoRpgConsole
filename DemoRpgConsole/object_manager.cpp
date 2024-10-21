@@ -7,6 +7,7 @@
 #include "door.h"
 #include "trap.h"
 #include "arrow.h"
+#include "ingridient.h"
 #include "random_placement.h"
 #include "map_symbols.h"
 #include "data.h" 
@@ -217,6 +218,21 @@ void ObjectManager::createObjects(const std::string& filename)
       }
       pArrow->setVisibility(std::stoul(section.at("Visibility")));
       mObjects.push_back(std::move(pArrow));
+      // Push object with the random placement
+      if (randomPosition) {
+        mRandomObjects.push_back(mObjects.back());
+      }
+    }
+    else if (section.at("Type") == "INGRIDIENT") {
+      std::shared_ptr<Ingridient> pIngridient = std::make_shared<Ingridient>();
+      if (section.at("Position_x") != "random" && section.at("Position_y") != "random") {
+        pIngridient->setPosition({ std::stoi(section.at("Position_x")), std::stoi(section.at("Position_y")) });
+      }
+      else {
+        randomPosition = true;
+      }
+      pIngridient->setVisibility(std::stoul(section.at("Visibility")));
+      mObjects.push_back(std::move(pIngridient));
       // Push object with the random placement
       if (randomPosition) {
         mRandomObjects.push_back(mObjects.back());

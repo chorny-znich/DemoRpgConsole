@@ -6,7 +6,7 @@ Weapon_amount=2
 Armor_amount=0
 Door_amount=1
 Trap_amount=0
-Consumable_amount=0
+Consumable_amount=1
 
 [money_1]
 Position_x=random
@@ -44,3 +44,9 @@ Position_y=1
 Status=Hidden
 Type=DOOR
 Visibility=8
+
+[consumable_1]
+Position_x=random
+Position_y=random
+Type=INGRIDIENT
+Visibility=5
