@@ -6,7 +6,8 @@ GameObject::GameObject(GameObjectType type, GameObjectSubType subType) :
   mSubType{subType},
   mPrice{0},
   mVisible{false},
-  mVisibility{0}
+  mVisibility{0},
+  mAmount{0}
 {
 }
 
@@ -98,4 +99,14 @@ void GameObject::setVisibility(size_t value)
 size_t GameObject::getVisibility() const
 {
   return mVisibility;
+}
+
+void GameObject::setAmount(size_t value)
+{
+  mAmount = value;
+}
+
+size_t GameObject::getAmount() const
+{
+  return mAmount;
 }

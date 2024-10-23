@@ -17,11 +17,8 @@ class Ingridient : public GameObject
 private:
   const char IMAGE{'"'};
   const char AMOUNT_RANGE = 5;
-  size_t mAmount{ 0 };
   IngridientType mType;
-  void setAmount();
+  void setType();
 public:
   Ingridient();
-  size_t getAmount() const;
 };
-

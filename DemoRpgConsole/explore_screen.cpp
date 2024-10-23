@@ -572,11 +572,14 @@ std::string ExploreScreen::showLocationInfo()
       if (pObject->getType() == GameObjectType::MONEY) {
         auto pMoneyObject = std::static_pointer_cast<Money>(pObject);
         result += std::format("${}", pMoneyObject->getAmount());
-      }
+      }/*
       else if (pObject->getType() == GameObjectType::CONSUMABLE &&
         pObject->getSubType() == GameObjectSubType::ARROW) {
         auto pArrowObject = std::static_pointer_cast<Arrow>(pObject);
         result += std::format("{} arrows", pArrowObject->getAmount());
+      }*/
+      else if (pObject->getType() == GameObjectType::CONSUMABLE) {
+        result += std::format("{} {}", pObject->getAmount(), pObject->getName());
       }
       else {
         result += std::format("a {}", pObject->getName());

@@ -5,6 +5,7 @@ Arrow::Arrow() :
   GameObject(GameObjectType::CONSUMABLE, GameObjectSubType::ARROW)
 {
   setSymbol(IMAGE);
+  setName("Arrow");
   setAmount();
 }
 

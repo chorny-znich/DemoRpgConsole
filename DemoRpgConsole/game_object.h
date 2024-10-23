@@ -14,6 +14,7 @@ private:
   size_t mPrice;
   bool mVisible;
   size_t mVisibility;
+  size_t mAmount;
 
 protected:
   GameObjectType mType;
@@ -39,4 +40,6 @@ public:
   bool isVisible() const;
   void setVisibility(size_t value);
   size_t getVisibility() const;
+  void setAmount(size_t value);
+  size_t getAmount() const;
 };
